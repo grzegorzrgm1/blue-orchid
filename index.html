@@ -506,8 +506,10 @@ async function loadData() {
 
     const errorCount = Array.isArray(data.data_errors) ? data.data_errors.length : 0;
     showMessage(
-      Dane załadowane. Przeskanowano ${data.scanned_count ?? "?"} z ${data.universe_count ?? "?"} spółek. Błędy danych: ${errorCount}.
-    );
+  "Dane załadowane. Przeskanowano " + (data.scanned_count ?? "?") +
+  " z " + (data.universe_count ?? "?") +
+  " spółek. Błędy danych: " + errorCount + "."
+);
   } catch (error) {
     console.error("Błąd ładowania danych skanera:", error);
     statusText.textContent = "Nie udało się pobrać danych";
