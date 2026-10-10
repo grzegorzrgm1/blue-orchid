@@ -1,0 +1,49 @@
+ticker,sector
+NVDA,Technology
+AVGO,Technology
+AMD,Technology
+MSFT,Technology
+GOOGL,Communication
+META,Communication
+AMZN,Consumer Discretionary
+TSLA,Consumer Discretionary
+NFLX,Communication
+PLTR,Technology
+ORCL,Technology
+CRM,Technology
+ADBE,Technology
+QCOM,Technology
+MU,Technology
+LRCX,Technology
+AMAT,Technology
+KLAC,Technology
+ANET,Technology
+PANW,Technology
+CRWD,Technology
+NOW,Technology
+CAT,Industrials
+GE,Industrials
+ETN,Industrials
+PH,Industrials
+DE,Industrials
+RTX,Industrials
+LMT,Industrials
+CARR,Industrials
+XOM,Energy
+CVX,Energy
+COP,Energy
+EOG,Energy
+SLB,Energy
+JPM,Financials
+GS,Financials
+MS,Financials
+V,Financials
+MA,Financials
+HOOD,Financials
+COST,Consumer Discretionary
+HD,Consumer Discretionary
+LOW,Consumer Discretionary
+BKNG,Consumer Discretionary
+UBER,Industrials
+LLY,Healthcare
+ISRG,Healthcare

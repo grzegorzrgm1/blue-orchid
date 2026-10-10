@@ -1,0 +1,35 @@
+{
+  "updated": "demo",
+  "setups": [
+    {
+      "ticker": "NVDA",
+      "score": 94,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Ready",
+      "rs": "A+"
+    },
+    {
+      "ticker": "AVGO",
+      "score": 91,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Base",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "CAT",
+      "score": 87,
+      "sector": "Industrials",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Ready",
+      "rs": "A"
+    }
+  ]
+}
