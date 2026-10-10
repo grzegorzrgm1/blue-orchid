@@ -1,86 +1,234 @@
-import json, math, time
+import json
+import math
+import time
 from pathlib import Path
+
 import pandas as pd
 import yfinance as yf
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(_file_).resolve().parent
 TICKERS_FILE = ROOT / "tickers.csv"
 OUT_FILE = ROOT / "data.json"
 
-# V1: prosty, stały model. Bez EMA.
-# Timeframe'y: W / D / 4H / 1H.
-# 4H jest budowane z danych 1H.
+# V1.1: ta sama punktacja i progi co dotychczas.
+# Dodano diagnostykę, żeby widzieć również spółki odrzucone przez filtr.
+# Bez EMA. Ramy: W1 / D1 / H4 / H1; H4 budowane z danych H1.
+
+DIAGNOSTIC_TICKERS = {"VST", "BWXT", "OKLO", "CEG"}
+
 
 def fetch(ticker):
     t = yf.Ticker(ticker)
     daily = t.history(period="2y", interval="1d", auto_adjust=True)
     hourly = t.history(period="60d", interval="1h", auto_adjust=True)
+
     if daily.empty or hourly.empty:
         return None
-    four = hourly.resample("4h").agg({"Open":"first","High":"max","Low":"min","Close":"last","Volume":"sum"}).dropna()
-    weekly = daily.resample("W-FRI").agg({"Open":"first","High":"max","Low":"min","Close":"last","Volume":"sum"}).dropna()
+
+    four = hourly.resample("4h").agg({
+        "Open": "first",
+        "High": "max",
+        "Low": "min",
+        "Close": "last",
+        "Volume": "sum",
+    }).dropna()
+
+    weekly = daily.resample("W-FRI").agg({
+        "Open": "first",
+        "High": "max",
+        "Low": "min",
+        "Close": "last",
+        "Volume": "sum",
+    }).dropna()
+
     return weekly, daily, four, hourly
 
+
 def hh_hl(df, lookback=5):
-    if len(df) < lookback + 3: return False
+    if len(df) < lookback + 3:
+        return False
     recent = df.tail(lookback)
-    prev = df.iloc[-lookback*2:-lookback]
-    return recent["High"].max() >= prev["High"].max() and recent["Low"].min() >= prev["Low"].min()
+    prev = df.iloc[-lookback * 2:-lookback]
+    return (
+        recent["High"].max() >= prev["High"].max()
+        and recent["Low"].min() >= prev["Low"].min()
+    )
+
 
 def score_one(ticker, sector):
     got = fetch(ticker)
-    if got is None: return None
-    w,d,h4,h1 = got
+    if got is None:
+        return {
+            "ticker": ticker,
+            "sector": sector,
+            "data_ok": False,
+            "score": None,
+            "qualifies": False,
+            "reason": "Brak danych dziennych lub godzinowych z Yahoo Finance",
+        }
+
+    w, d, h4, h1 = got
+
     close = float(d["Close"].iloc[-1])
     sma50 = float(d["Close"].rolling(50).mean().iloc[-1])
     sma200 = float(d["Close"].rolling(200).mean().iloc[-1])
-    atr = float((d["High"]-d["Low"]).rolling(14).mean().iloc[-1])
-    if any(math.isnan(x) for x in [sma50,sma200,atr]): return None
+    atr = float((d["High"] - d["Low"]).rolling(14).mean().iloc[-1])
 
-    wtrend = hh_hl(w) and float(w["Close"].iloc[-1]) > float(w["Close"].rolling(20).mean().iloc[-1])
-    dtrend = hh_hl(d) and close > sma50 > sma200
-    h4trend = hh_hl(h4)
+    if any(math.isnan(x) for x in [sma50, sma200, atr]):
+        return {
+            "ticker": ticker,
+            "sector": sector,
+            "data_ok": False,
+            "score": None,
+            "qualifies": False,
+            "reason": "Za mało danych do obliczenia SMA50/SMA200/ATR",
+        }
 
-    # Prostą miarą RS: ostatnie 60 sesji.
+    weekly_hhhl = hh_hl(w)
+    weekly_close_above_sma20 = (
+        len(w) >= 20
+        and float(w["Close"].iloc[-1]) >
+        float(w["Close"].rolling(20).mean().iloc[-1])
+    )
+    daily_hhhl = hh_hl(d)
+    h4_hhhl = hh_hl(h4)
+
+    wtrend = weekly_hhhl and weekly_close_above_sma20
+    dtrend = daily_hhhl and close > sma50 > sma200
+
+    # Dotychczasowa miara siły: zwrot bezwzględny z 60 sesji,
+    # nie relatywna siła względem indeksu.
     rs = float(d["Close"].pct_change(60).iloc[-1])
 
-    # Pullback: cena nie dalej niż 2 ATR od SMA50 i nie pod SMA200.
     pullback = abs(close - sma50) <= 2.0 * atr and close > sma200
-    breakout = close >= float(d["High"].tail(20).iloc[:-1].max())
+    prior_20_high = float(d["High"].tail(20).iloc[:-1].max())
+    breakout = close >= prior_20_high
+
+    h1_volume_up = (
+        len(h1) >= 20
+        and float(h1["Volume"].tail(5).mean()) >
+        float(h1["Volume"].tail(20).mean())
+    )
 
     points = 0
     points += 25 if wtrend else 0
     points += 25 if dtrend else 0
-    points += 15 if h4trend else 0
+    points += 15 if h4_hhhl else 0
     points += 15 if rs > 0.08 else (8 if rs > 0 else 0)
     points += 10 if pullback or breakout else 0
-    points += 10 if float(h1["Volume"].tail(5).mean()) > float(h1["Volume"].tail(20).mean()) else 0
-
-    if points < 60:
-        return None
+    points += 10 if h1_volume_up else 0
 
     setup = "Breakout" if breakout else ("Pullback" if pullback else "Trend")
+    qualifies = points >= 60
+
+    failed_conditions = []
+    if not wtrend:
+        failed_conditions.append("trend W1")
+    if not dtrend:
+        failed_conditions.append("trend D1 / cena > SMA50 > SMA200")
+    if not h4_hhhl:
+        failed_conditions.append("układ HH/HL H4")
+    if rs <= 0:
+        failed_conditions.append("dodatni zwrot z 60 sesji")
+    if not (pullback or breakout):
+        failed_conditions.append("Pullback lub Breakout")
+    if not h1_volume_up:
+        failed_conditions.append("wzrost średniego wolumenu H1")
+    if not qualifies:
+        failed_conditions.append(f"próg punktowy 60 (wynik: {points})")
+
     return {
-        "ticker": ticker, "score": points, "sector": sector,
+        "ticker": ticker,
+        "sector": sector,
+        "data_ok": True,
+        "score": points,
+        "qualifies": qualifies,
         "weekly": "HH/HL" if wtrend else "Mixed",
         "daily": "HH/HL" if dtrend else "Mixed",
+        "h4_hhhl": h4_hhhl,
         "setup4h": setup,
-        "entry1h": "Confirm" if h4trend else "Watch",
-        "rs": "A+" if rs > .15 else ("A" if rs > .08 else "B")
+        "entry1h": "Confirm" if h4_hhhl else "Watch",
+        "h1_volume_up": h1_volume_up,
+        "close": round(close, 2),
+        "sma50": round(sma50, 2),
+        "sma200": round(sma200, 2),
+        "atr14": round(atr, 2),
+        "above_sma50": close > sma50,
+        "above_sma200": close > sma200,
+        "sma50_above_sma200": sma50 > sma200,
+        "return_60d_pct": round(rs * 100, 2),
+        "rs": "A+" if rs > 0.15 else ("A" if rs > 0.08 else "B"),
+        "pullback": pullback,
+        "breakout": breakout,
+        "failed_conditions": failed_conditions,
     }
+
 
 def main():
     universe = pd.read_csv(TICKERS_FILE)
     results = []
-    for _, row in universe.iterrows():
-        try:
-            x = score_one(row["ticker"], row["sector"])
-            if x: results.append(x)
-        except Exception as e:
-            print("skip", row["ticker"], e)
-    results.sort(key=lambda x: x["score"], reverse=True)
-    OUT_FILE.write_text(json.dumps({"updated": time.strftime("%Y-%m-%d %H:%M UTC"), "setups": results[:30]}, indent=2), encoding="utf-8")
-    print(f"Saved {len(results)} setups to {OUT_FILE}")
+    errors = []
 
-if __name__ == "__main__":
+    for _, row in universe.iterrows():
+        ticker = str(row["ticker"]).strip().upper()
+        sector = str(row["sector"]).strip()
+        try:
+            item = score_one(ticker, sector)
+            if item:
+                results.append(item)
+                if not item.get("data_ok", False):
+                    errors.append({
+                        "ticker": ticker,
+                        "reason": item.get("reason", "Nieznany błąd danych"),
+                    })
+        except Exception as e:
+            message = str(e)
+            print("skip", ticker, message)
+            errors.append({"ticker": ticker, "reason": message})
+            results.append({
+                "ticker": ticker,
+                "sector": sector,
+                "data_ok": False,
+                "score": None,
+                "qualifies": False,
+                "reason": message,
+            })
+
+    # Zachowujemy dotychczasowe pole setups dla dashboardu:
+    # wyłącznie spółki, które przekroczyły próg 60 pkt.
+    setups = [x for x in results if x.get("data_ok") and x.get("qualifies")]
+    setups.sort(key=lambda x: x["score"], reverse=True)
+
+    # Pełna diagnostyka dla całego uniwersum, w tym spółek odrzuconych.
+    diagnostics = [x for x in results if x["ticker"] in DIAGNOSTIC_TICKERS]
+    diagnostics.sort(key=lambda x: x["ticker"])
+
+    results.sort(
+        key=lambda x: (x.get("score") is not None, x.get("score") or -1),
+        reverse=True,
+    )
+
+    output = {
+        "updated": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()),
+        "universe_count": len(universe),
+        "scanned_count": sum(1 for x in results if x.get("data_ok")),
+        "qualifying_count": len(setups),
+        "setups": setups[:30],
+        "diagnostic_tickers": diagnostics,
+        "all_diagnostics": results,
+        "data_errors": errors,
+    }
+
+    OUT_FILE.write_text(
+        json.dumps(output, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    print(
+        f"Scanned {output['scanned_count']}/{len(universe)} tickers; "
+        f"saved {len(setups)} qualifying setups to {OUT_FILE}"
+    )
+    print("Diagnostic tickers:", json.dumps(diagnostics, ensure_ascii=False))
+
+
+if _name_ == "_main_":
     main()
