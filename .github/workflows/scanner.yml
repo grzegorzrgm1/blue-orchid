@@ -26,18 +26,15 @@ jobs:
       - name: Show repository files
         run: |
           pwd
-          ls -la
-          find . -maxdepth 3 \( -name "requirements.txt" -o -name "scanner.py" \)
+          ls -lb
+          find "$GITHUB_WORKSPACE" -maxdepth 2 -type f
 
       - name: Install dependencies
         run: |
-          pwd
-          ls -la
-          cat requirements.txt
-          python -m pip install -r requirements.txt
+          python -m pip install -r "$GITHUB_WORKSPACE/requirements.txt"
 
       - name: Run scanner
-        run: python scanner.py
+        run: python "$GITHUB_WORKSPACE/scanner.py"
 
       - name: Save updated data
         run: |
