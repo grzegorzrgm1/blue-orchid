@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 import yfinance as yf
 
-ROOT = Path(_file_).resolve().parent
+ROOT = Path(__file__).resolve().parent
 TICKERS_FILE = ROOT / "tickers.csv"
 OUT_FILE = ROOT / "data.json"
 
@@ -323,5 +323,5 @@ def main():
     )
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
