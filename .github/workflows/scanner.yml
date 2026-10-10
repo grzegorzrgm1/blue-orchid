@@ -23,18 +23,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Show repository files
-        run: |
-          pwd
-          ls -lb
-          find "$GITHUB_WORKSPACE" -maxdepth 2 -type f
-
       - name: Install dependencies
-        run: |
-          python -m pip install -r "$GITHUB_WORKSPACE/requirements.txt"
+        run: python -m pip install yfinance pandas numpy
 
       - name: Run scanner
-        run: python "$GITHUB_WORKSPACE/scanner.py"
+        run: python scanner.py
 
       - name: Save updated data
         run: |
