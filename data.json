@@ -1,35 +1,125 @@
 {
-  "updated": "demo",
+  "updated": "2026-10-10 12:23 UTC",
   "setups": [
     {
-      "ticker": "NVDA",
-      "score": 94,
+      "ticker": "PLTR",
+      "score": 90,
       "sector": "Technology",
       "weekly": "HH/HL",
       "daily": "HH/HL",
-      "setup4h": "Pullback",
-      "entry1h": "Ready",
-      "rs": "A+"
-    },
-    {
-      "ticker": "AVGO",
-      "score": 91,
-      "sector": "Technology",
-      "weekly": "HH/HL",
-      "daily": "HH/HL",
-      "setup4h": "Base",
+      "setup4h": "Breakout",
       "entry1h": "Confirm",
       "rs": "A+"
     },
     {
-      "ticker": "CAT",
-      "score": 87,
-      "sector": "Industrials",
+      "ticker": "COP",
+      "score": 90,
+      "sector": "Energy",
       "weekly": "HH/HL",
       "daily": "HH/HL",
       "setup4h": "Pullback",
-      "entry1h": "Ready",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "EOG",
+      "score": 83,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "B"
+    },
+    {
+      "ticker": "ANET",
+      "score": 80,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "XOM",
+      "score": 80,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "NVDA",
+      "score": 75,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Watch",
       "rs": "A"
+    },
+    {
+      "ticker": "AMD",
+      "score": 65,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Watch",
+      "rs": "A+"
+    },
+    {
+      "ticker": "MSFT",
+      "score": 65,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Watch",
+      "rs": "A+"
+    },
+    {
+      "ticker": "MU",
+      "score": 65,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "Mixed",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "PANW",
+      "score": 65,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Watch",
+      "rs": "A+"
+    },
+    {
+      "ticker": "CRWD",
+      "score": 65,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Watch",
+      "rs": "A+"
+    },
+    {
+      "ticker": "NOW",
+      "score": 65,
+      "sector": "Technology",
+      "weekly": "Mixed",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "A+"
     }
   ]
 }
