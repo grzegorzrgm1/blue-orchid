@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-10 12:38 UTC",
+  "updated": "2026-10-10 12:56 UTC",
   "setups": [
+    {
+      "ticker": "ELV",
+      "score": 100,
+      "sector": "Healthcare",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "A"
+    },
     {
       "ticker": "PLTR",
       "score": 90,
@@ -22,9 +32,89 @@
       "rs": "A+"
     },
     {
+      "ticker": "HPE",
+      "score": 90,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Breakout",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "OXY",
+      "score": 90,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "A"
+    },
+    {
+      "ticker": "DVN",
+      "score": 90,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "A"
+    },
+    {
+      "ticker": "PSX",
+      "score": 90,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "VLO",
+      "score": 90,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "MCK",
+      "score": 90,
+      "sector": "Healthcare",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Breakout",
+      "entry1h": "Confirm",
+      "rs": "A"
+    },
+    {
+      "ticker": "RSG",
+      "score": 85,
+      "sector": "Industrials",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "B"
+    },
+    {
       "ticker": "EOG",
       "score": 83,
       "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "B"
+    },
+    {
+      "ticker": "CTVA",
+      "score": 83,
+      "sector": "Materials",
       "weekly": "HH/HL",
       "daily": "HH/HL",
       "setup4h": "Pullback",
@@ -52,6 +142,36 @@
       "rs": "A+"
     },
     {
+      "ticker": "DELL",
+      "score": 80,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "P",
+      "score": 80,
+      "sector": "Consumer Discretionary",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "MPC",
+      "score": 80,
+      "sector": "Energy",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Trend",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
       "ticker": "NVDA",
       "score": 75,
       "sector": "Technology",
@@ -60,6 +180,76 @@
       "setup4h": "Pullback",
       "entry1h": "Watch",
       "rs": "A"
+    },
+    {
+      "ticker": "SMCI",
+      "score": 75,
+      "sector": "Technology",
+      "weekly": "HH/HL",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Watch",
+      "rs": "A+"
+    },
+    {
+      "ticker": "SNAP",
+      "score": 75,
+      "sector": "Communication",
+      "weekly": "HH/HL",
+      "daily": "Mixed",
+      "setup4h": "Breakout",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "GILD",
+      "score": 75,
+      "sector": "Healthcare",
+      "weekly": "HH/HL",
+      "daily": "Mixed",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "A"
+    },
+    {
+      "ticker": "MRNA",
+      "score": 75,
+      "sector": "Healthcare",
+      "weekly": "HH/HL",
+      "daily": "Mixed",
+      "setup4h": "Breakout",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "HCA",
+      "score": 75,
+      "sector": "Healthcare",
+      "weekly": "HH/HL",
+      "daily": "Mixed",
+      "setup4h": "Breakout",
+      "entry1h": "Confirm",
+      "rs": "A+"
+    },
+    {
+      "ticker": "KMI",
+      "score": 68,
+      "sector": "Energy",
+      "weekly": "Mixed",
+      "daily": "HH/HL",
+      "setup4h": "Breakout",
+      "entry1h": "Confirm",
+      "rs": "B"
+    },
+    {
+      "ticker": "COR",
+      "score": 68,
+      "sector": "Healthcare",
+      "weekly": "Mixed",
+      "daily": "HH/HL",
+      "setup4h": "Pullback",
+      "entry1h": "Confirm",
+      "rs": "B"
     },
     {
       "ticker": "AMD",
@@ -109,16 +299,6 @@
       "daily": "HH/HL",
       "setup4h": "Trend",
       "entry1h": "Watch",
-      "rs": "A+"
-    },
-    {
-      "ticker": "NOW",
-      "score": 65,
-      "sector": "Technology",
-      "weekly": "Mixed",
-      "daily": "HH/HL",
-      "setup4h": "Pullback",
-      "entry1h": "Confirm",
       "rs": "A+"
     }
   ]
