@@ -231,10 +231,15 @@ def main():
         "data_errors": errors,
     }
 
-    OUT_FILE.write_text(
-        json.dumps(output, indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+  OUT_FILE.write_text(
+    json.dumps(
+        output,
+        indent=2,
+        ensure_ascii=False,
+        default=lambda obj: obj.item() if hasattr(obj, "item") else str(obj),
+    ),
+    encoding="utf-8",
+)
 
     print(
         f"Scanned {output['scanned_count']}/{len(universe)} tickers; "
