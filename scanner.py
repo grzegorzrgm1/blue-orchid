@@ -10,8 +10,8 @@ ROOT = Path(_file_).resolve().parent
 TICKERS_FILE = ROOT / "tickers.csv"
 OUT_FILE = ROOT / "data.json"
 
-# V1.1: ta sama punktacja i progi co dotychczas.
-# Dodano diagnostykę, żeby widzieć również spółki odrzucone przez filtr.
+# V1.1: dotychczasowa punktacja i progi pozostają bez zmian.
+# Dodano diagnostykę spółek odrzuconych przez filtr.
 # Bez EMA. Ramy: W1 / D1 / H4 / H1; H4 budowane z danych H1.
 
 DIAGNOSTIC_TICKERS = {"VST", "BWXT", "OKLO", "CEG"}
@@ -59,16 +59,12 @@ def score_one(ticker, sector):
     got = fetch(ticker)
     if got is None:
         return {
-            "ticker": ticker,
-            "sector": sector,
-            "data_ok": False,
-            "score": None,
-            "qualifies": False,
+            "ticker": ticker, "sector": sector, "data_ok": False,
+            "score": None, "qualifies": False,
             "reason": "Brak danych dziennych lub godzinowych z Yahoo Finance",
         }
 
     w, d, h4, h1 = got
-
     close = float(d["Close"].iloc[-1])
     sma50 = float(d["Close"].rolling(50).mean().iloc[-1])
     sma200 = float(d["Close"].rolling(200).mean().iloc[-1])
@@ -76,16 +72,13 @@ def score_one(ticker, sector):
 
     if any(math.isnan(x) for x in [sma50, sma200, atr]):
         return {
-            "ticker": ticker,
-            "sector": sector,
-            "data_ok": False,
-            "score": None,
-            "qualifies": False,
+            "ticker": ticker, "sector": sector, "data_ok": False,
+            "score": None, "qualifies": False,
             "reason": "Za mało danych do obliczenia SMA50/SMA200/ATR",
         }
 
     weekly_hhhl = hh_hl(w)
-    weekly_close_above_sma20 = (
+    weekly_sma20 = (
         len(w) >= 20
         and float(w["Close"].iloc[-1]) >
         float(w["Close"].rolling(20).mean().iloc[-1])
@@ -93,17 +86,13 @@ def score_one(ticker, sector):
     daily_hhhl = hh_hl(d)
     h4_hhhl = hh_hl(h4)
 
-    wtrend = weekly_hhhl and weekly_close_above_sma20
+    wtrend = weekly_hhhl and weekly_sma20
     dtrend = daily_hhhl and close > sma50 > sma200
-
-    # Dotychczasowa miara siły: zwrot bezwzględny z 60 sesji,
-    # nie relatywna siła względem indeksu.
     rs = float(d["Close"].pct_change(60).iloc[-1])
 
     pullback = abs(close - sma50) <= 2.0 * atr and close > sma200
     prior_20_high = float(d["High"].tail(20).iloc[:-1].max())
     breakout = close >= prior_20_high
-
     h1_volume_up = (
         len(h1) >= 20
         and float(h1["Volume"].tail(5).mean()) >
@@ -120,22 +109,21 @@ def score_one(ticker, sector):
 
     setup = "Breakout" if breakout else ("Pullback" if pullback else "Trend")
     qualifies = points >= 60
-
-    failed_conditions = []
+    failed = []
     if not wtrend:
-        failed_conditions.append("trend W1")
+        failed.append("trend W1")
     if not dtrend:
-        failed_conditions.append("trend D1 / cena > SMA50 > SMA200")
+        failed.append("trend D1 / cena > SMA50 > SMA200")
     if not h4_hhhl:
-        failed_conditions.append("układ HH/HL H4")
+        failed.append("układ HH/HL H4")
     if rs <= 0:
-        failed_conditions.append("dodatni zwrot z 60 sesji")
+        failed.append("dodatni zwrot z 60 sesji")
     if not (pullback or breakout):
-        failed_conditions.append("Pullback lub Breakout")
+        failed.append("Pullback lub Breakout")
     if not h1_volume_up:
-        failed_conditions.append("wzrost średniego wolumenu H1")
+        failed.append("wzrost średniego wolumenu H1")
     if not qualifies:
-        failed_conditions.append(f"próg punktowy 60 (wynik: {points})")
+        failed.append(f"próg punktowy 60 (wynik: {points})")
 
     return {
         "ticker": ticker,
@@ -160,7 +148,7 @@ def score_one(ticker, sector):
         "rs": "A+" if rs > 0.15 else ("A" if rs > 0.08 else "B"),
         "pullback": pullback,
         "breakout": breakout,
-        "failed_conditions": failed_conditions,
+        "failed_conditions": failed,
     }
 
 
@@ -186,23 +174,14 @@ def main():
             print("skip", ticker, message)
             errors.append({"ticker": ticker, "reason": message})
             results.append({
-                "ticker": ticker,
-                "sector": sector,
-                "data_ok": False,
-                "score": None,
-                "qualifies": False,
-                "reason": message,
+                "ticker": ticker, "sector": sector, "data_ok": False,
+                "score": None, "qualifies": False, "reason": message,
             })
 
-    # Zachowujemy dotychczasowe pole setups dla dashboardu:
-    # wyłącznie spółki, które przekroczyły próg 60 pkt.
     setups = [x for x in results if x.get("data_ok") and x.get("qualifies")]
     setups.sort(key=lambda x: x["score"], reverse=True)
-
-    # Pełna diagnostyka dla całego uniwersum, w tym spółek odrzuconych.
     diagnostics = [x for x in results if x["ticker"] in DIAGNOSTIC_TICKERS]
     diagnostics.sort(key=lambda x: x["ticker"])
-
     results.sort(
         key=lambda x: (x.get("score") is not None, x.get("score") or -1),
         reverse=True,
@@ -218,7 +197,6 @@ def main():
         "all_diagnostics": results,
         "data_errors": errors,
     }
-
     OUT_FILE.write_text(
         json.dumps(output, indent=2, ensure_ascii=False),
         encoding="utf-8",
