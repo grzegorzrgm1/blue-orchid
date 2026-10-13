@@ -6,11 +6,18 @@ from pathlib import Path
 import pandas as pd
 import yfinance as yf
 
+# GitHub Actions runs from the repository root; avoid special __file__ syntax.
 ROOT = Path(".")
 TICKERS_FILE = ROOT / "tickers.csv"
 OUT_FILE = ROOT / "data.json"
 DIAGNOSTIC_TICKERS = {"VST", "BWXT", "OKLO", "CEG"}
 MIN_SCORE = 60
+PIVOT_LEFT = 2
+PIVOT_RIGHT = 2
+PULLBACK_MIN_ATR = 0.5
+PULLBACK_MAX_ATR = 2.0
+SMA_NEAR_ATR = 0.5
+PULLBACK_LOOKBACK_H4 = 30
 
 
 def json_default(obj):
@@ -19,28 +26,37 @@ def json_default(obj):
     return str(obj)
 
 
+def resample_ohlcv(data, rule):
+    return data.resample(rule).agg({
+        "Open": "first", "High": "max", "Low": "min",
+        "Close": "last", "Volume": "sum",
+    }).dropna()
+
+
 def fetch(ticker):
     stock = yf.Ticker(ticker)
     daily = stock.history(period="2y", interval="1d", auto_adjust=True)
     hourly = stock.history(period="60d", interval="1h", auto_adjust=True)
     if daily.empty or hourly.empty:
         return None
-
     daily = daily[~daily.index.duplicated(keep="last")].sort_index()
     hourly = hourly[~hourly.index.duplicated(keep="last")].sort_index()
-
-    weekly = daily.resample("W-FRI").agg({
-        "Open": "first", "High": "max", "Low": "min",
-        "Close": "last", "Volume": "sum",
-    }).dropna()
-    four_hour = hourly.resample("4h").agg({
-        "Open": "first", "High": "max", "Low": "min",
-        "Close": "last", "Volume": "sum",
-    }).dropna()
-    return weekly, daily, four_hour, hourly
+    weekly = resample_ohlcv(daily, "W-FRI")
+    h4 = resample_ohlcv(hourly, "4h")
+    return weekly, daily, h4, hourly
 
 
-def confirmed_pivots(data, left=2, right=2):
+def atr_series(data, period=14):
+    prev = data["Close"].shift(1)
+    true_range = pd.concat([
+        data["High"] - data["Low"],
+        (data["High"] - prev).abs(),
+        (data["Low"] - prev).abs(),
+    ], axis=1).max(axis=1)
+    return true_range.rolling(period).mean()
+
+
+def confirmed_pivots(data, left=PIVOT_LEFT, right=PIVOT_RIGHT):
     highs = data["High"].to_numpy(dtype=float)
     lows = data["Low"].to_numpy(dtype=float)
     high_pivots, low_pivots = [], []
@@ -48,29 +64,76 @@ def confirmed_pivots(data, left=2, right=2):
         hw = highs[i-left:i+right+1]
         lw = lows[i-left:i+right+1]
         if highs[i] == hw.max() and (hw == highs[i]).sum() == 1:
-            high_pivots.append((i, highs[i]))
+            high_pivots.append((i, float(highs[i])))
         if lows[i] == lw.min() and (lw == lows[i]).sum() == 1:
-            low_pivots.append((i, lows[i]))
+            low_pivots.append((i, float(lows[i])))
     return high_pivots, low_pivots
 
 
-def hh_hl(data, left=2, right=2, pivots_needed=2):
-    """Dwa ostatnie potwierdzone szczyty i dołki muszą rosnąć."""
+def rising_structure(data, left=PIVOT_LEFT, right=PIVOT_RIGHT):
     highs, lows = confirmed_pivots(data, left, right)
-    if len(highs) < pivots_needed or len(lows) < pivots_needed:
-        return False
-    last_highs = [v for _, v in highs[-pivots_needed:]]
-    last_lows = [v for _, v in lows[-pivots_needed:]]
     return bool(
-        all(b > a for a, b in zip(last_highs, last_highs[1:]))
-        and all(b > a for a, b in zip(last_lows, last_lows[1:]))
+        len(highs) >= 2 and len(lows) >= 2
+        and highs[-1][1] > highs[-2][1]
+        and lows[-1][1] > lows[-2][1]
     )
 
 
 def failed_result(ticker, sector, reason):
     return {
         "ticker": ticker, "sector": sector, "data_ok": False,
-        "score": None, "qualifies": False, "reason": reason,
+        "score": None, "qualifies": False, "status": "Data error",
+        "reason": reason,
+    }
+
+
+def h4_setup(h4):
+    empty = {
+        "pullback": False, "breakout_confirmed": False,
+        "pivot_high": None, "pullback_depth_atr": None,
+        "near_sma50": False,
+    }
+    if len(h4) < 65:
+        return empty
+
+    # Ignore the newest H4 bucket because it may still be forming.
+    closed = h4.iloc[:-1].copy()
+    if len(closed) < 60:
+        return empty
+    closed["SMA50"] = closed["Close"].rolling(50).mean()
+    closed["ATR14"] = atr_series(closed, 14)
+    last_close = float(closed["Close"].iloc[-1])
+    last_atr = float(closed["ATR14"].iloc[-1])
+    if math.isnan(last_atr) or last_atr <= 0:
+        return empty
+
+    pivots, _ = confirmed_pivots(closed)
+    eligible = [(i, price) for i, price in pivots if i < len(closed) - 1]
+    if not eligible:
+        return empty
+    pivot_i, pivot_price = eligible[-1]
+    after = closed.iloc[pivot_i + 1:]
+    if after.empty:
+        return empty
+
+    recent = after.tail(PULLBACK_LOOKBACK_H4)
+    lowest = float(recent["Low"].min())
+    depth = max(0.0, (pivot_price - lowest) / last_atr)
+    valid = recent["SMA50"].notna()
+    near_sma = False
+    if valid.any():
+        dist = (recent.loc[valid, "Close"] - recent.loc[valid, "SMA50"]).abs()
+        near_sma = bool((dist <= SMA_NEAR_ATR * last_atr).any())
+
+    pullback = bool(near_sma or PULLBACK_MIN_ATR <= depth <= PULLBACK_MAX_ATR)
+    # Breakout must be above a pivot confirmed before the final closed H4 bar.
+    breakout = bool(pullback and last_close > pivot_price)
+    return {
+        "pullback": pullback,
+        "breakout_confirmed": breakout,
+        "pivot_high": round(pivot_price, 2),
+        "pullback_depth_atr": round(depth, 2),
+        "near_sma50": near_sma,
     }
 
 
@@ -78,89 +141,97 @@ def score_one(ticker, sector):
     data = fetch(ticker)
     if data is None:
         return failed_result(ticker, sector, "Brak danych dziennych lub godzinowych")
+    weekly, daily, h4, hourly = data
 
-    weekly, daily, four_hour, hourly = data
-    daily_closed = daily.iloc[:-1] if len(daily) > 1 else daily
-    weekly_closed = weekly.iloc[:-1] if len(weekly) > 1 else weekly
-    h4_closed = four_hour.iloc[:-1] if len(four_hour) > 1 else four_hour
+    # Trend filters use completed daily and weekly bars only.
+    d = daily.iloc[:-1].copy() if len(daily) > 1 else daily.copy()
+    w = weekly.iloc[:-1].copy() if len(weekly) > 1 else weekly.copy()
+    h4_closed = h4.iloc[:-1].copy() if len(h4) > 1 else h4.copy()
+    if len(d) < 200 or len(w) < 20 or len(h4_closed) < 60:
+        return failed_result(ticker, sector, "Za malo danych do srednich i struktury")
 
-    if len(daily_closed) < 200 or len(weekly_closed) < 20 or len(h4_closed) < 10:
-        return failed_result(ticker, sector, "Za mało zamkniętych świec do oceny trendu")
+    close = float(d["Close"].iloc[-1])
+    sma50 = float(d["Close"].rolling(50).mean().iloc[-1])
+    sma200 = float(d["Close"].rolling(200).mean().iloc[-1])
+    sma20w = float(w["Close"].rolling(20).mean().iloc[-1])
+    if any(math.isnan(v) for v in [close, sma50, sma200, sma20w]):
+        return failed_result(ticker, sector, "Za malo danych do obliczenia srednich")
 
-    close = float(daily["Close"].iloc[-1])
-    sma50 = float(daily["Close"].rolling(50).mean().iloc[-1])
-    sma200 = float(daily["Close"].rolling(200).mean().iloc[-1])
-    atr = float((daily["High"] - daily["Low"]).rolling(14).mean().iloc[-1])
-    if any(math.isnan(v) for v in [close, sma50, sma200, atr]):
-        return failed_result(ticker, sector, "Za mało danych do SMA50/SMA200/ATR")
-
-    weekly_structure = hh_hl(weekly_closed, left=1, right=1)
-    weekly_sma20 = float(weekly_closed["Close"].iloc[-1]) > float(
-        weekly_closed["Close"].rolling(20).mean().iloc[-1]
+    weekly_trend = bool(
+        rising_structure(w, left=1, right=1) and float(w["Close"].iloc[-1]) > sma20w
     )
-    daily_structure = hh_hl(daily_closed, left=2, right=2)
-    h4_structure = hh_hl(h4_closed, left=2, right=2)
-    weekly_trend = bool(weekly_structure and weekly_sma20)
-    daily_trend = bool(daily_structure and close > sma50 and sma50 > sma200)
-    return_60d = float(daily["Close"].pct_change(60).iloc[-1])
+    daily_trend = bool(rising_structure(d) and close > sma50 and sma50 > sma200)
+    h4_trend = rising_structure(h4_closed)
+    setup = h4_setup(h4)
 
-    pullback = bool(
-        daily_trend and abs(close - sma50) <= 1.5 * atr and close > sma200
-    )
-    previous_high = float(daily_closed["High"].tail(20).max())
-    breakout = bool(close > previous_high)
+    ret60 = float(d["Close"].pct_change(60).iloc[-1])
     volume_up = bool(
         len(hourly) >= 20
         and float(hourly["Volume"].tail(5).mean())
         > float(hourly["Volume"].tail(20).mean())
     )
+    aligned = bool(weekly_trend and daily_trend and h4_trend)
+
+    if not weekly_trend or not daily_trend:
+        status = "Trend invalidated"
+    elif setup["breakout_confirmed"] and aligned:
+        status = "Confirmed setup"
+    elif setup["pullback"]:
+        status = "Pullback waiting"
+    else:
+        status = "Trend OK"
 
     score = 0
     score += 25 if weekly_trend else 0
     score += 25 if daily_trend else 0
-    score += 15 if h4_structure else 0
-    score += 15 if return_60d > 0.08 else (8 if return_60d > 0 else 0)
-    score += 10 if pullback or breakout else 0
+    score += 15 if h4_trend else 0
+    score += 15 if ret60 > 0.08 else (8 if ret60 > 0 else 0)
+    score += 10 if setup["pullback"] else 0
     score += 10 if volume_up else 0
-
-    trend_alignment = bool(weekly_trend and daily_trend and h4_structure)
-    qualifies = bool(score >= MIN_SCORE and trend_alignment)
-    setup = "Breakout" if breakout else "Pullback" if pullback else "Trend" if h4_structure else "No setup"
+    qualifies = bool(status == "Confirmed setup" and score >= MIN_SCORE)
 
     failed = []
     if not weekly_trend:
-        failed.append("Trend W1")
+        failed.append("W1: HH/HL i zamkniecie powyzej SMA20 W1")
     if not daily_trend:
-        failed.append("Trend D1 / cena > SMA50 > SMA200")
-    if not h4_structure:
-        failed.append("Struktura wzrostowa H4")
-    if return_60d <= 0:
+        failed.append("D1: HH/HL i cena > SMA50 > SMA200")
+    if not h4_trend:
+        failed.append("H4: wzrostowa struktura HH/HL")
+    if not setup["pullback"]:
+        failed.append("H4: brak korekty przy SMA50 lub cofniecia 0,5-2,0 ATR")
+    elif not setup["breakout_confirmed"]:
+        failed.append("H4: oczekiwanie na zamkniecie powyzej pivot high")
+    if ret60 <= 0:
         failed.append("Dodatni zwrot z 60 sesji")
-    if not (pullback or breakout):
-        failed.append("Pullback lub Breakout")
-    if not volume_up:
-        failed.append("Wzrost wolumenu H1 (pomocniczy)")
     if score < MIN_SCORE:
-        failed.append(f"Próg {MIN_SCORE} punktów; wynik {score}")
-    if score >= MIN_SCORE and not trend_alignment:
-        failed.append("Brak pełnej zgodności trendu W1/D1/H4")
+        failed.append("Prog punktowy " + str(MIN_SCORE) + "; wynik " + str(score))
 
+    h4sma50 = float(h4_closed["Close"].rolling(50).mean().iloc[-1])
+    h4atr = float(atr_series(h4_closed, 14).iloc[-1])
+    datr = float(atr_series(d, 14).iloc[-1])
     return {
         "ticker": ticker, "sector": sector, "data_ok": True,
-        "score": int(score), "qualifies": qualifies,
+        "score": int(score), "qualifies": qualifies, "status": status,
         "weekly": "HH/HL" if weekly_trend else "Mixed",
         "daily": "HH/HL" if daily_trend else "Mixed",
-        "h4_hhhl": h4_structure, "setup4h": setup,
+        "h4_hhhl": bool(h4_trend), "setup4h": status,
         "entry1h": "Not evaluated", "h1_volume_up": volume_up,
         "close": round(close, 2), "sma50": round(sma50, 2),
-        "sma200": round(sma200, 2), "atr14": round(atr, 2),
+        "sma200": round(sma200, 2), "sma20_weekly": round(sma20w, 2),
+        "sma50_h4": round(h4sma50, 2) if not math.isnan(h4sma50) else None,
+        "atr14": round(datr, 2) if not math.isnan(datr) else None,
+        "atr14_h4": round(h4atr, 2) if not math.isnan(h4atr) else None,
         "above_sma50": bool(close > sma50),
         "above_sma200": bool(close > sma200),
         "sma50_above_sma200": bool(sma50 > sma200),
-        "return_60d_pct": round(return_60d * 100, 2),
-        "rs": "A+" if return_60d > 0.15 else "A" if return_60d > 0.08 else "B",
-        "pullback": pullback, "breakout": breakout,
-        "trend_alignment": trend_alignment, "failed_conditions": failed,
+        "return_60d_pct": round(ret60 * 100, 2),
+        "rs": "A+" if ret60 > 0.15 else "A" if ret60 > 0.08 else "B",
+        "pullback": bool(setup["pullback"]),
+        "breakout": bool(setup["breakout_confirmed"]),
+        "pivot_high_h4": setup["pivot_high"],
+        "pullback_depth_atr": setup["pullback_depth_atr"],
+        "near_sma50_h4": setup["near_sma50"],
+        "trend_alignment": aligned, "failed_conditions": failed,
     }
 
 
@@ -180,11 +251,12 @@ def main():
                 errors.append({"ticker": ticker, "reason": result.get("reason", "Brak danych")})
         except Exception as error:
             message = str(error)
-            print("Pominieto", ticker, message)
+            print("Pominieto " + ticker + ": " + message)
             errors.append({"ticker": ticker, "reason": message})
             results.append({
                 "ticker": ticker, "sector": sector, "data_ok": False,
-                "score": None, "qualifies": False, "reason": message,
+                "score": None, "qualifies": False, "status": "Data error",
+                "reason": message,
             })
 
     setups = [r for r in results if r.get("data_ok") and r.get("qualifies")]
@@ -200,19 +272,19 @@ def main():
         "updated": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()),
         "universe_count": int(len(universe)),
         "scanned_count": int(sum(1 for r in results if r.get("data_ok"))),
-        "qualifying_count": len(setups), "setups": setups[:30],
-        "diagnostic_tickers": diagnostics, "all_diagnostics": results,
+        "qualifying_count": len(setups),
+        "setups": setups[:30],
+        "diagnostic_tickers": diagnostics,
+        "all_diagnostics": results,
         "data_errors": errors,
     }
     OUT_FILE.write_text(
         json.dumps(output, indent=2, ensure_ascii=False, default=json_default),
         encoding="utf-8",
     )
-    print(f"Przeskanowano {output['scanned_count']}/{len(universe)} spolek.")
-    print(f"Spolki spelniajace prog: {len(setups)}.")
-    print("Diagnostyka VST, BWXT, OKLO, CEG:", json.dumps(
-        diagnostics, ensure_ascii=False, default=json_default
-    ))
+    print("Przeskanowano " + str(output["scanned_count"]) + "/" + str(len(universe)) + " spolek.")
+    print("Potwierdzone setupy: " + str(len(setups)) + ".")
+    print("Diagnostyka: " + json.dumps(diagnostics, ensure_ascii=False, default=json_default))
 
 
 if __name__ == "__main__":
