@@ -28,6 +28,7 @@ def fetch(ticker):
 
     daily = daily[~daily.index.duplicated(keep="last")].sort_index()
     hourly = hourly[~hourly.index.duplicated(keep="last")].sort_index()
+
     weekly = daily.resample("W-FRI").agg({
         "Open": "first", "High": "max", "Low": "min",
         "Close": "last", "Volume": "sum",
@@ -54,7 +55,7 @@ def confirmed_pivots(data, left=2, right=2):
 
 
 def hh_hl(data, left=2, right=2, pivots_needed=2):
-    """Wzrostowa struktura: ostatnie potwierdzone szczyty i dołki rosną."""
+    """Dwa ostatnie potwierdzone szczyty i dołki muszą rosnąć."""
     highs, lows = confirmed_pivots(data, left, right)
     if len(highs) < pivots_needed or len(lows) < pivots_needed:
         return False
@@ -79,7 +80,6 @@ def score_one(ticker, sector):
         return failed_result(ticker, sector, "Brak danych dziennych lub godzinowych")
 
     weekly, daily, four_hour, hourly = data
-    # Pomijamy ostatni okres, który może być jeszcze niezamknięty.
     daily_closed = daily.iloc[:-1] if len(daily) > 1 else daily
     weekly_closed = weekly.iloc[:-1] if len(weekly) > 1 else weekly
     h4_closed = four_hour.iloc[:-1] if len(four_hour) > 1 else four_hour
@@ -151,8 +151,7 @@ def score_one(ticker, sector):
         "weekly": "HH/HL" if weekly_trend else "Mixed",
         "daily": "HH/HL" if daily_trend else "Mixed",
         "h4_hhhl": h4_structure, "setup4h": setup,
-        "entry1h": "Not evaluated",
-        "h1_volume_up": volume_up,
+        "entry1h": "Not evaluated", "h1_volume_up": volume_up,
         "close": round(close, 2), "sma50": round(sma50, 2),
         "sma200": round(sma200, 2), "atr14": round(atr, 2),
         "above_sma50": bool(close > sma50),
