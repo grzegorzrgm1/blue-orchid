@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 import yfinance as yf
 
-ROOT = Path(_file_).resolve().parent
+ROOT = Path(".")
 TICKERS_FILE = ROOT / "tickers.csv"
 OUT_FILE = ROOT / "data.json"
 DIAGNOSTIC_TICKERS = {"VST", "BWXT", "OKLO", "CEG"}
