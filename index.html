@@ -171,7 +171,8 @@ input:focus { border-color: var(--blue); }
         <thead>
           <tr>
             <th>Ticker</th><th>Score</th><th>Sektor</th><th>Weekly</th>
-            <th>Daily</th><th>4H setup</th><th>1H</th><th>Zwrot 60 sesji</th>
+<th>Daily</th><th>4H setup</th><th>Pivot H4</th>
+<th>Pullback ATR</th><th>SMA50 H4</th><th>1H</th><th>Zwrot 60 sesji</th>
           </tr>
         </thead>
         <tbody id="setupRows">
@@ -331,11 +332,13 @@ function renderSetups(setups) {
   const body = document.getElementById("setupRows");
 
   if (!setups.length) {
-    body.innerHTML = '<tr><td colspan="8" class="muted">Żadna spółka nie spełnia obecnie progu albo lista jest pusta.</td></tr>';
+    body.innerHTML = '<tr><td colspan="11" class="muted">Żadna spółka nie spełnia obecnie progu albo lista jest pusta.</td></tr>';
     return;
   }
 
   body.innerHTML = setups.map(function(item) {
+    const nearSma = item.near_sma50_h4;
+
     return `
       <tr>
         <td><b>${escapeHtml(item.ticker)}</b></td>
@@ -344,6 +347,9 @@ function renderSetups(setups) {
         <td>${escapeHtml(item.weekly || "—")}</td>
         <td>${escapeHtml(item.daily || "—")}</td>
         <td><span class="tag b">${escapeHtml(item.setup4h || "—")}</span></td>
+        <td>${fmt(item.pivot_high_h4)}</td>
+        <td>${fmt(item.pullback_depth_atr, " ATR")}</td>
+        <td>${nearSma === true ? '<span class="tag">Tak</span>' : nearSma === false ? '<span class="tag y">Nie</span>' : "—"}</td>
         <td>${escapeHtml(item.entry1h || "—")}</td>
         <td>${fmt(item.return_60d_pct, "%")}</td>
       </tr>
