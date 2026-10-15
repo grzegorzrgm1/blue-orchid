@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swing Scanner V2</title>
+<style>
+:root{color-scheme:dark;--bg:#071426;--panel:#10233d;--panel2:#142b49;--border:#244466;--text:#eef5ff;--muted:#9cb0ca;--green:#64e6ac;--cyan:#6bdcff;--amber:#ffd166;--red:#ff7777}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#14345a 0,#071426 62%);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.wrap{max-width:1500px;margin:0 auto;padding:24px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+h1{font-size:29px;letter-spacing:.3px;margin:0 0 8px;font-weight:800}
+.subtitle{color:#c4d4ea;margin:0 0 12px}
+.connection{display:flex;align-items:center;gap:8px;color:var(--green);font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
+.meta{text-align:right;color:var(--muted);font-size:12px;line-height:1.7}
+.notice{padding:12px 15px;background:#0d2038;border:1px solid var(--border);border-radius:12px;margin-bottom:18px;color:#dbe8fa}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:12px;margin-bottom:24px}
+.stat,.sector,.section{background:linear-gradient(145deg,rgba(22,45,76,.96),rgba(10,27,49,.96));border:1px solid var(--border);border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.stat{padding:17px 18px}
+.stat-label{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.stat-value{font-weight:800;font-size:28px;margin:10px 0 5px}
+.stat-note{color:var(--muted);font-size:12px}
+.section{padding:18px;margin:18px 0}
+.section h2{font-size:18px;margin:0 0 6px}
+.help{color:var(--muted);font-size:12px;margin:0 0 14px;line-height:1.5}
+.table-wrap{overflow:auto;border-radius:10px;border:1px solid rgba(57,91,130,.45)}
+table{border-collapse:collapse;width:100%;min-width:880px}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid rgba(66,98,137,.35);white-space:nowrap}
+th{background:#102440;color:#a8bfdb;font-size:11px;text-transform:uppercase;letter-spacing:.5px;position:sticky;top:0}
+tbody tr:hover{background:rgba(66,124,177,.12)}
+tbody tr:last-child td{border-bottom:0}
+.ticker{font-weight:800;letter-spacing:.3px}
+.score{font-weight:800;color:var(--green);font-variant-numeric:tabular-nums}
+.status{display:inline-block;border-radius:7px;padding:5px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+.status-confirmed{background:#124f42;color:#82f3c0;border:1px solid #267d67}
+.status-waiting{background:#614817;color:#ffe09a;border:1px solid #92702a}
+.status-trend{background:#173e62;color:#9ddcff;border:1px solid #2e6995}
+.status-invalid{background:#5c2933;color:#ffb1b1;border:1px solid #914552}
+.status-error{background:#493b24;color:#ffd78c;border:1px solid #886c35}
+.long-accent{border-left:4px solid var(--green)}
+.short-accent{border-left:4px solid var(--red)}
+.sectors{display:grid;grid-template-columns:repeat(4,minmax(170px,1fr));gap:12px}
+.sector{padding:15px}
+.sector-title{font-weight:800;margin:0 0 8px}
+.sector-meta{color:var(--muted);font-size:12px;line-height:1.8}
+.mini-bar{margin-top:10px;height:6px;background:#243c59;border-radius:8px;overflow:hidden;display:flex}
+.mini-long{height:100%;background:var(--green)}
+.mini-short{height:100%;background:var(--red)}
+.search{width:min(540px,100%);background:#091a2e;color:var(--text);border:1px solid #365578;border-radius:9px;padding:11px 13px;margin:4px 0 14px;font-size:13px;outline:none}
+.search:focus{border-color:var(--cyan)}
+.reason{white-space:normal;min-width:280px;max-width:440px;color:#bacbe0;font-size:12px;line-height:1.45}
+.empty{padding:22px;color:var(--muted);text-align:center}
+@media(max-width:900px){.wrap{padding:14px}.stats{grid-template-columns:repeat(2,minmax(130px,1fr))}.sectors{grid-template-columns:repeat(2,minmax(140px,1fr))}.meta{text-align:left}}
+@media(max-width:520px){h1{font-size:23px}.stats{grid-template-columns:repeat(2,minmax(120px,1fr))}.stat{padding:13px}.stat-value{font-size:23px}.sectors{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>SWING SCANNER V2</h1>
+    <p class="subtitle">Trend following • EMA20 / EMA50 • W1 / D1 / H4 • LONG i SHORT</p>
+    <div class="connection"><span class="dot"></span><span id="connection">Łączenie z data.json…</span></div>
+  </div>
+  <div class="meta">
+    <div>Automatyczny skaner • GitHub Pages</div>
+    <div>Ostatnia aktualizacja danych: <span id="updated">—</span></div>
+  </div>
+</header>
+
+<div class="notice" id="notice">Wczytywanie najnowszych danych…</div>
+<div class="stats" id="stats"></div>
+
+<section class="section long-accent">
+  <h2>LONG — trendy wzrostowe</h2>
+  <p class="help">Cena powyżej EMA20 i EMA50, EMA20 powyżej EMA50 na W1 i D1. Na H4 szukamy korekty do średnich i zamknięcia z powrotem powyżej EMA20.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ticker</th><th>Score</th><th>Sektor</th><th>W1</th><th>D1</th><th>Status H4</th><th>Cena D1</th><th>EMA20 D1</th><th>EMA50 D1</th><th>Zwrot 60 sesji</th></tr></thead>
+      <tbody id="longRows"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section short-accent">
+  <h2>SHORT — trendy spadkowe</h2>
+  <p class="help">Cena poniżej EMA20 i EMA50, EMA20 poniżej EMA50 na W1 i D1. Na H4 szukamy odbicia do średnich i zamknięcia z powrotem poniżej EMA20.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ticker</th><th>Score</th><th>Sektor</th><th>W1</th><th>D1</th><th>Status H4</th><th>Cena D1</th><th>EMA20 D1</th><th>EMA50 D1</th><th>Zwrot 60 sesji</th></tr></thead>
+      <tbody id="shortRows"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Pokrycie sektorów</h2>
+  <p class="help">Liczba spółek z uniwersum oraz liczba kandydatów LONG i SHORT, które przechodzą filtry trendu. To nie jest ocena siły sektora.</p>
+  <div class="sectors" id="sectors"></div>
+</section>
+
+<section class="section">
+  <h2>Diagnostyka uniwersum</h2>
+  <p class="help">Wyszukaj ticker, sektor lub warunek, który zatrzymał kierunek LONG albo SHORT.</p>
+  <input class="search" id="search" type="search" placeholder="Np. NVDA, Energy, Trend invalidated, brak korekty">
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ticker</th><th>Sektor</th><th>LONG</th><th>Score L</th><th>SHORT</th><th>Score S</th><th>Cena D1</th><th>EMA20</th><th>EMA50</th><th>Zwrot 60 sesji</th><th>Dlaczego / diagnostyka</th></tr></thead>
+      <tbody id="diagnosticRows"></tbody>
+    </table>
+  </div>
+</section>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var cachedData = null;
+
+  function escapeHtml(value) {
+    return String(value === null || value === undefined ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function numberText(value, suffix) {
+    if (value === null || value === undefined || value === "" || Number.isNaN(Number(value))) {
+      return "—";
+    }
+    return Number(value).toLocaleString("pl-PL", { maximumFractionDigits: 2 }) + (suffix || "");
+  }
+
+  function statusClass(status) {
+    if (status === "Confirmed setup") return "status status-confirmed";
+    if (status === "Pullback waiting") return "status status-waiting";
+    if (status === "Trend OK") return "status status-trend";
+    if (status === "Data error") return "status status-error";
+    return "status status-invalid";
+  }
+
+  function statusBadge(status) {
+    return '<span class="' + statusClass(status) + '">' + escapeHtml(status || "—") + "</span>";
+  }
+
+  function candidateRow(item) {
+    return "<tr>" +
+      '<td class="ticker">' + escapeHtml(item.ticker) + "</td>" +
+      '<td class="score">' + numberText(item.score) + "</td>" +
+      "<td>" + escapeHtml(item.sector) + "</td>" +
+      "<td>" + escapeHtml(item.weekly || "—") + "</td>" +
+      "<td>" + escapeHtml(item.daily || "—") + "</td>" +
+      "<td>" + statusBadge(item.status) + "</td>" +
+      "<td>" + numberText(item.close) + "</td>" +
+      "<td>" + numberText(item.ema20) + "</td>" +
+      "<td>" + numberText(item.ema50) + "</td>" +
+      "<td>" + numberText(item.return_60d_pct, "%") + "</td>" +
+      "</tr>";
+  }
+
+  function renderCandidates(elementId, items) {
+    var body = document.getElementById(elementId);
+    if (!items || items.length === 0) {
+      body.innerHTML = '<tr><td colspan="10" class="empty">Brak kandydatów spełniających filtry trendu w tym kierunku.</td></tr>';
+      return;
+    }
+    body.innerHTML = items.map(candidateRow).join("");
+  }
+
+  function buildSectorCards(data) {
+    var bySector = {};
+    (data.all_diagnostics || []).forEach(function (item) {
+      var name = item.sector || "Unassigned";
+      if (!bySector[name]) {
+        bySector[name] = { total: 0, long: 0, short: 0, longConfirmed: 0, shortConfirmed: 0 };
+      }
+      bySector[name].total += 1;
+      if (item.data_ok && item.long_status !== "Trend invalidated" && item.long_status !== "Data error") {
+        bySector[name].long += 1;
+      }
+      if (item.data_ok && item.short_status !== "Trend invalidated" && item.short_status !== "Data error") {
+        bySector[name].short += 1;
+      }
+      if (item.long_status === "Confirmed setup") bySector[name].longConfirmed += 1;
+      if (item.short_status === "Confirmed setup") bySector[name].shortConfirmed += 1;
+    });
+
+    var names = Object.keys(bySector).sort(function (a, b) {
+      return bySector[b].total - bySector[a].total || a.localeCompare(b);
+    });
+    var maxTotal = 1;
+    names.forEach(function (name) {
+      maxTotal = Math.max(maxTotal, bySector[name].total);
+    });
+
+    document.getElementById("sectors").innerHTML = names.map(function (name) {
+      var item = bySector[name];
+      var longWidth = Math.min(100, item.long / maxTotal * 100);
+      var shortWidth = Math.min(100, item.short / maxTotal * 100);
+      return '<div class="sector"><div class="sector-title">' + escapeHtml(name) + "</div>" +
+        '<div class="sector-meta">' + item.total + " spółek na liście<br>" +
+        '<span style="color:var(--green)">LONG: ' + item.long + " kandydatów (" + item.longConfirmed + " potwierdzonych)</span><br>" +
+        '<span style="color:var(--red)">SHORT: ' + item.short + " kandydatów (" + item.shortConfirmed + " potwierdzonych)</span></div>" +
+        '<div class="mini-bar"><div class="mini-long" style="width:' + longWidth + '%"></div><div class="mini-short" style="width:' + shortWidth + '%"></div></div></div>';
+    }).join("");
+  }
+
+  function diagnosticsText(item) {
+    var parts = [];
+    if (item.reason) parts.push(item.reason);
+    if (item.long_failed_conditions && item.long_failed_conditions.length) {
+      parts.push("LONG: " + item.long_failed_conditions.join("; "));
+    }
+    if (item.short_failed_conditions && item.short_failed_conditions.length) {
+      parts.push("SHORT: " + item.short_failed_conditions.join("; "));
+    }
+    return parts.length ? parts.join(" | ") : "Brak";
+  }
+
+  function diagnosticRow(item) {
+    return "<tr>" +
+      '<td class="ticker">' + escapeHtml(item.ticker) + "</td>" +
+      "<td>" + escapeHtml(item.sector || "—") + "</td>" +
+      "<td>" + statusBadge(item.long_status) + "</td>" +
+      "<td>" + numberText(item.long_score) + "</td>" +
+      "<td>" + statusBadge(item.short_status) + "</td>" +
+      "<td>" + numberText(item.short_score) + "</td>" +
+      "<td>" + numberText(item.close) + "</td>" +
+      "<td>" + numberText(item.ema20) + "</td>" +
+      "<td>" + numberText(item.ema50) + "</td>" +
+      "<td>" + numberText(item.return_60d_pct, "%") + "</td>" +
+      '<td class="reason">' + escapeHtml(diagnosticsText(item)) + "</td>" +
+      "</tr>";
+  }
+
+  function renderDiagnostics() {
+    if (!cachedData) return;
+    var query = document.getElementById("search").value.toLowerCase().trim();
+    var rows = (cachedData.all_diagnostics || []).filter(function (item) {
+      var text = [
+        item.ticker, item.sector, item.long_status, item.short_status,
+        diagnosticsText(item)
+      ].join(" ").toLowerCase();
+      return !query || text.indexOf(query) !== -1;
+    });
+    var body = document.getElementById("diagnosticRows");
+    if (!rows.length) {
+      body.innerHTML = '<tr><td colspan="11" class="empty">Brak wyników wyszukiwania.</td></tr>';
+      return;
+    }
+    body.innerHTML = rows.map(diagnosticRow).join("");
+  }
+
+  function showError(message) {
+    document.getElementById("connection").textContent = "Nie udało się pobrać danych";
+    document.getElementById("connection").style.color = "var(--red)";
+    document.getElementById("notice").textContent = message;
+  }
+
+  document.getElementById("search").addEventListener("input", renderDiagnostics);
+
+  fetch("data.json?cache=" + new Date().getTime())
+    .then(function (response) {
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      return response.json();
+    })
+    .then(function (data) {
+      cachedData = data;
+      document.getElementById("connection").textContent = "Połączono z data.json";
+      document.getElementById("connection").style.color = "var(--green)";
+      document.getElementById("updated").textContent = data.updated || "—";
+      document.getElementById("notice").textContent =
+        "Dane załadowane. Przeskanowano " + numberText(data.scanned_count) +
+        " z " + numberText(data.universe_count) + " spółek. Błędy danych: " +
+        numberText(data.data_error_count === undefined ? (data.data_errors || []).length : data.data_error_count) + ".";
+
+      document.getElementById("stats").innerHTML =
+        '<div class="stat"><div class="stat-label">Uniwersum</div><div class="stat-value">' + numberText(data.universe_count) + '</div><div class="stat-note">spółek na liście</div></div>' +
+        '<div class="stat"><div class="stat-label">Przeskanowane</div><div class="stat-value">' + numberText(data.scanned_count) + '</div><div class="stat-note">z dostępnych danych</div></div>' +
+        '<div class="stat"><div class="stat-label">Kandydaci LONG / SHORT</div><div class="stat-value">' + numberText(data.long_candidate_count) + " / " + numberText(data.short_candidate_count) + '</div><div class="stat-note">trendy zgodne na W1 i D1</div></div>' +
+        '<div class="stat"><div class="stat-label">Potwierdzone setupy</div><div class="stat-value">' + numberText(data.long_confirmed_count) + " / " + numberText(data.short_confirmed_count) + '</div><div class="stat-note">LONG / SHORT</div></div>';
+
+      renderCandidates("longRows", data.long_candidates || []);
+      renderCandidates("shortRows", data.short_candidates || []);
+      buildSectorCards(data);
+      renderDiagnostics();
+    })
+    .catch(function (error) {
+      showError("Błąd ładowania data.json: " + error.message);
+    });
+})();
+</script>
+</body>
+</html>
