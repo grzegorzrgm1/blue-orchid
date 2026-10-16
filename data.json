@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-16 00:58 UTC",
+  "updated": "2026-10-16 07:03 UTC",
   "strategy_version": "Swing Scanner V2 - EMA20/EMA50 LONG/SHORT",
   "universe_count": 261,
   "scanned_count": 256,
   "data_error_count": 5,
-  "long_candidate_count": 44,
-  "short_candidate_count": 18,
-  "long_confirmed_count": 8,
+  "long_candidate_count": 51,
+  "short_candidate_count": 22,
+  "long_confirmed_count": 10,
   "short_confirmed_count": 5,
-  "qualifying_count": 13,
+  "qualifying_count": 15,
   "long_candidates": [
     {
       "ticker": "WAB",
@@ -233,6 +233,80 @@
       "ema20_distance_h4_pct": 1.728
     },
     {
+      "ticker": "IQV",
+      "sector": "Healthcare",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 79,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 271.04,
+      "ema20": 263.43,
+      "ema50": 254.47,
+      "ema20_weekly": 235.45,
+      "ema50_weekly": 213.96,
+      "ema20_h4": 263.59,
+      "ema50_h4": 262.8,
+      "h4_close": 271.23,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.03,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 12,
+      "extension_points": 9,
+      "bounce_body_atr": 0.28,
+      "daily_extension_atr": 1.02,
+      "return_60d_pct": 36.53,
+      "directional_return_60d_pct": 36.53,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 2.816
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 79,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 200.5,
+      "ema20": 193.75,
+      "ema50": 180.0,
+      "ema20_weekly": 166.13,
+      "ema50_weekly": 153.71,
+      "ema20_h4": 199.13,
+      "ema50_h4": 190.83,
+      "h4_close": 200.5,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.3,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 12,
+      "extension_points": 9,
+      "bounce_body_atr": 0.27,
+      "daily_extension_atr": 1.05,
+      "return_60d_pct": 60.95,
+      "directional_return_60d_pct": 60.95,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 0.684
+    },
+    {
       "ticker": "MSFT",
       "sector": "Technology",
       "direction": "LONG",
@@ -424,6 +498,45 @@
       "ema20_distance_h4_pct": 3.796
     },
     {
+      "ticker": "CTVA",
+      "sector": "Materials",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 73,
+      "qualifies": false,
+      "status": "Pullback waiting",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 12.88,
+      "ema20": 12.87,
+      "ema50": 12.58,
+      "ema20_weekly": 12.24,
+      "ema50_weekly": 11.66,
+      "ema20_h4": 13.09,
+      "ema50_h4": 12.79,
+      "h4_close": 12.86,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.5,
+      "bounce_confirmed": false,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 0,
+      "extension_points": 15,
+      "bounce_body_atr": 0.41,
+      "daily_extension_atr": 0.01,
+      "return_60d_pct": -2.83,
+      "directional_return_60d_pct": -2.83,
+      "failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 1.812
+    },
+    {
       "ticker": "MRK",
       "sector": "Healthcare",
       "direction": "LONG",
@@ -500,6 +613,45 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
       "ema20_distance_h4_pct": 0.238
+    },
+    {
+      "ticker": "META",
+      "sector": "Communication",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 71,
+      "qualifies": false,
+      "status": "Pullback waiting",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 736.72,
+      "ema20": 720.51,
+      "ema50": 677.55,
+      "ema20_weekly": 641.65,
+      "ema50_weekly": 635.13,
+      "ema20_h4": 735.82,
+      "ema50_h4": 712.1,
+      "h4_close": 736.49,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.26,
+      "bounce_confirmed": false,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 0,
+      "extension_points": 13,
+      "bounce_body_atr": 0.26,
+      "daily_extension_atr": 0.73,
+      "return_60d_pct": 17.56,
+      "directional_return_60d_pct": 17.56,
+      "failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 0.091
     },
     {
       "ticker": "BIIB",
@@ -776,6 +928,46 @@
       "ema20_distance_h4_pct": 4.218
     },
     {
+      "ticker": "MRNA",
+      "sector": "Healthcare",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 65,
+      "qualifies": false,
+      "status": "Pullback waiting",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 236.5,
+      "ema20": 197.21,
+      "ema50": 159.87,
+      "ema20_weekly": 121.08,
+      "ema50_weekly": 81.5,
+      "ema20_h4": 212.32,
+      "ema50_h4": 189.46,
+      "h4_close": 236.5,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": false,
+      "pullback_atr": 0.0,
+      "bounce_confirmed": false,
+      "extended": true,
+      "pullback_points": 20,
+      "bounce_points": 0,
+      "extension_points": 0,
+      "bounce_body_atr": 0.12,
+      "daily_extension_atr": 2.28,
+      "return_60d_pct": 307.27,
+      "directional_return_60d_pct": 307.27,
+      "failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 10.222
+    },
+    {
       "ticker": "IFF",
       "sector": "Materials",
       "direction": "LONG",
@@ -853,6 +1045,45 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 5.815
+    },
+    {
+      "ticker": "ABNB",
+      "sector": "Consumer Discretionary",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 81,
+      "qualifies": false,
+      "status": "Trend OK",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 174.28,
+      "ema20": 165.06,
+      "ema50": 164.83,
+      "ema20_weekly": 159.99,
+      "ema50_weekly": 147.44,
+      "ema20_h4": 165.35,
+      "ema50_h4": 165.18,
+      "h4_close": 174.27,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 0.0,
+      "bounce_confirmed": true,
+      "extended": true,
+      "pullback_points": 20,
+      "bounce_points": 16,
+      "extension_points": 0,
+      "bounce_body_atr": 0.55,
+      "daily_extension_atr": 2.03,
+      "return_60d_pct": 24.44,
+      "directional_return_60d_pct": 24.44,
+      "failed_conditions": [
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 5.119
     },
     {
       "ticker": "TRV",
@@ -1213,6 +1444,46 @@
       "ema20_distance_h4_pct": 2.375
     },
     {
+      "ticker": "PSX",
+      "sector": "Energy",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 49,
+      "qualifies": false,
+      "status": "Trend OK",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 289.2,
+      "ema20": 272.63,
+      "ema50": 253.49,
+      "ema20_weekly": 227.5,
+      "ema50_weekly": 190.0,
+      "ema20_h4": 281.07,
+      "ema50_h4": 269.47,
+      "h4_close": 289.09,
+      "h4_invalidated": false,
+      "pullback": false,
+      "near_ema20_h4": false,
+      "near_ema50_h4": false,
+      "pullback_atr": 0.0,
+      "bounce_confirmed": false,
+      "extended": false,
+      "pullback_points": 0,
+      "bounce_points": 0,
+      "extension_points": 4,
+      "bounce_body_atr": 0.15,
+      "daily_extension_atr": 1.88,
+      "return_60d_pct": 37.52,
+      "directional_return_60d_pct": 37.52,
+      "failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "Ponizej progu punktowego 60"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 2.773
+    },
+    {
       "ticker": "XOM",
       "sector": "Energy",
       "direction": "LONG",
@@ -1293,293 +1564,6 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
       "ema20_distance_h4_pct": 2.659
-    },
-    {
-      "ticker": "CME",
-      "sector": "Financials",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 289.46,
-      "ema20": 274.94,
-      "ema50": 271.13,
-      "ema20_weekly": 269.39,
-      "ema50_weekly": 268.19,
-      "ema20_h4": 278.31,
-      "ema50_h4": 274.39,
-      "h4_close": 289.6,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": true,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.31,
-      "daily_extension_atr": 2.45,
-      "return_60d_pct": 16.68,
-      "directional_return_60d_pct": 16.68,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.898
-    },
-    {
-      "ticker": "MPC",
-      "sector": "Energy",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 476.92,
-      "ema20": 435.75,
-      "ema50": 395.67,
-      "ema20_weekly": 346.52,
-      "ema50_weekly": 278.82,
-      "ema20_h4": 455.5,
-      "ema50_h4": 428.12,
-      "h4_close": 476.74,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": true,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.11,
-      "daily_extension_atr": 2.53,
-      "return_60d_pct": 51.42,
-      "directional_return_60d_pct": 51.42,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.456
-    },
-    {
-      "ticker": "MO",
-      "sector": "Consumer Staples",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 73.84,
-      "ema20": 70.14,
-      "ema50": 69.08,
-      "ema20_weekly": 68.2,
-      "ema50_weekly": 64.97,
-      "ema20_h4": 71.23,
-      "ema50_h4": 69.99,
-      "h4_close": 73.83,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": true,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.21,
-      "daily_extension_atr": 2.55,
-      "return_60d_pct": 3.95,
-      "directional_return_60d_pct": 3.95,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.521
-    },
-    {
-      "ticker": "COR",
-      "sector": "Healthcare",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 341.41,
-      "ema20": 321.44,
-      "ema50": 316.97,
-      "ema20_weekly": 311.36,
-      "ema50_weekly": 309.54,
-      "ema20_h4": 325.77,
-      "ema50_h4": 320.39,
-      "h4_close": 341.28,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": true,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.4,
-      "daily_extension_atr": 2.56,
-      "return_60d_pct": 13.8,
-      "directional_return_60d_pct": 13.8,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.544
-    },
-    {
-      "ticker": "KO",
-      "sector": "Consumer Staples",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 92.0,
-      "ema20": 88.45,
-      "ema50": 87.33,
-      "ema20_weekly": 84.82,
-      "ema50_weekly": 79.44,
-      "ema20_h4": 89.31,
-      "ema50_h4": 88.38,
-      "h4_close": 91.89,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": false,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.53,
-      "daily_extension_atr": 2.57,
-      "return_60d_pct": 12.59,
-      "directional_return_60d_pct": 12.59,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 2.809
-    },
-    {
-      "ticker": "COP",
-      "sector": "Energy",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 141.73,
-      "ema20": 133.59,
-      "ema50": 129.77,
-      "ema20_weekly": 124.11,
-      "ema50_weekly": 114.68,
-      "ema20_h4": 136.16,
-      "ema50_h4": 133.0,
-      "h4_close": 141.75,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": false,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.22,
-      "daily_extension_atr": 2.75,
-      "return_60d_pct": 20.11,
-      "directional_return_60d_pct": 20.11,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 3.946
-    },
-    {
-      "ticker": "EL",
-      "sector": "Consumer Discretionary",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 45,
-      "qualifies": false,
-      "status": "Trend OK",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 107.19,
-      "ema20": 97.52,
-      "ema50": 95.02,
-      "ema20_weekly": 91.76,
-      "ema50_weekly": 89.55,
-      "ema20_h4": 98.9,
-      "ema50_h4": 96.98,
-      "h4_close": 107.19,
-      "h4_invalidated": false,
-      "pullback": false,
-      "near_ema20_h4": false,
-      "near_ema50_h4": false,
-      "pullback_atr": 0.0,
-      "bounce_confirmed": true,
-      "extended": true,
-      "pullback_points": 0,
-      "bounce_points": 0,
-      "extension_points": 0,
-      "bounce_body_atr": 0.52,
-      "daily_extension_atr": 2.9,
-      "return_60d_pct": 30.16,
-      "directional_return_60d_pct": 30.16,
-      "failed_conditions": [
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 7.735
     }
   ],
   "short_candidates": [
@@ -1845,6 +1829,45 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
       "ema20_distance_h4_pct": 1.324
+    },
+    {
+      "ticker": "CARR",
+      "sector": "Industrials",
+      "direction": "SHORT",
+      "data_ok": true,
+      "score": 77,
+      "qualifies": false,
+      "status": "Pullback waiting",
+      "weekly": "Below EMA20/EMA50",
+      "daily": "Below EMA20/EMA50",
+      "close": 54.96,
+      "ema20": 55.6,
+      "ema50": 57.89,
+      "ema20_weekly": 60.5,
+      "ema50_weekly": 61.92,
+      "ema20_h4": 55.1,
+      "ema50_h4": 55.91,
+      "h4_close": 54.96,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 0.59,
+      "bounce_confirmed": false,
+      "extended": false,
+      "pullback_points": 17,
+      "bounce_points": 0,
+      "extension_points": 15,
+      "bounce_body_atr": 0.47,
+      "daily_extension_atr": 0.48,
+      "return_60d_pct": -19.3,
+      "directional_return_60d_pct": 19.3,
+      "failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 0.256
     },
     {
       "ticker": "BWXT",
@@ -2198,6 +2221,46 @@
       "ema20_distance_h4_pct": 0.584
     },
     {
+      "ticker": "AA",
+      "sector": "Materials",
+      "direction": "SHORT",
+      "data_ok": true,
+      "score": 49,
+      "qualifies": false,
+      "status": "Trend OK",
+      "weekly": "Below EMA20/EMA50",
+      "daily": "Below EMA20/EMA50",
+      "close": 40.42,
+      "ema20": 42.96,
+      "ema50": 46.04,
+      "ema20_weekly": 49.8,
+      "ema50_weekly": 50.65,
+      "ema20_h4": 41.67,
+      "ema50_h4": 43.48,
+      "h4_close": 40.43,
+      "h4_invalidated": false,
+      "pullback": false,
+      "near_ema20_h4": false,
+      "near_ema50_h4": false,
+      "pullback_atr": 0.0,
+      "bounce_confirmed": false,
+      "extended": false,
+      "pullback_points": 0,
+      "bounce_points": 0,
+      "extension_points": 4,
+      "bounce_body_atr": 0.44,
+      "daily_extension_atr": 1.93,
+      "return_60d_pct": -12.28,
+      "directional_return_60d_pct": 12.28,
+      "failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "Ponizej progu punktowego 60"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 3.075
+    },
+    {
       "ticker": "ALB",
       "sector": "Materials",
       "direction": "SHORT",
@@ -2278,6 +2341,88 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
       "ema20_distance_h4_pct": 4.686
+    },
+    {
+      "ticker": "OKLO",
+      "sector": "Utilities",
+      "direction": "SHORT",
+      "data_ok": true,
+      "score": 45,
+      "qualifies": false,
+      "status": "Trend OK",
+      "weekly": "Below EMA20/EMA50",
+      "daily": "Below EMA20/EMA50",
+      "close": 30.01,
+      "ema20": 35.16,
+      "ema50": 39.04,
+      "ema20_weekly": 45.3,
+      "ema50_weekly": 55.66,
+      "ema20_h4": 33.14,
+      "ema50_h4": 35.88,
+      "h4_close": 30.02,
+      "h4_invalidated": false,
+      "pullback": false,
+      "near_ema20_h4": false,
+      "near_ema50_h4": false,
+      "pullback_atr": 0.0,
+      "bounce_confirmed": false,
+      "extended": true,
+      "pullback_points": 0,
+      "bounce_points": 0,
+      "extension_points": 0,
+      "bounce_body_atr": 0.57,
+      "daily_extension_atr": 2.58,
+      "return_60d_pct": -32.56,
+      "directional_return_60d_pct": 32.56,
+      "failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "Ponizej progu punktowego 60"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 10.396
+    },
+    {
+      "ticker": "TE",
+      "sector": "Utilities",
+      "direction": "SHORT",
+      "data_ok": true,
+      "score": 45,
+      "qualifies": false,
+      "status": "Trend OK",
+      "weekly": "Below EMA20/EMA50",
+      "daily": "Below EMA20/EMA50",
+      "close": 2.93,
+      "ema20": 3.63,
+      "ema50": 4.33,
+      "ema20_weekly": 5.16,
+      "ema50_weekly": 5.24,
+      "ema20_h4": 3.31,
+      "ema50_h4": 3.74,
+      "h4_close": 2.94,
+      "h4_invalidated": false,
+      "pullback": false,
+      "near_ema20_h4": false,
+      "near_ema50_h4": false,
+      "pullback_atr": 0.0,
+      "bounce_confirmed": false,
+      "extended": true,
+      "pullback_points": 0,
+      "bounce_points": 0,
+      "extension_points": 0,
+      "bounce_body_atr": 1.08,
+      "daily_extension_atr": 2.73,
+      "return_60d_pct": -51.41,
+      "directional_return_60d_pct": 51.41,
+      "failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "Ponizej progu punktowego 60"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 12.719
     }
   ],
   "long_setups": [
@@ -2502,6 +2647,80 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 1.728
+    },
+    {
+      "ticker": "IQV",
+      "sector": "Healthcare",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 79,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 271.04,
+      "ema20": 263.43,
+      "ema50": 254.47,
+      "ema20_weekly": 235.45,
+      "ema50_weekly": 213.96,
+      "ema20_h4": 263.59,
+      "ema50_h4": 262.8,
+      "h4_close": 271.23,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.03,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 12,
+      "extension_points": 9,
+      "bounce_body_atr": 0.28,
+      "daily_extension_atr": 1.02,
+      "return_60d_pct": 36.53,
+      "directional_return_60d_pct": 36.53,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 2.816
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 79,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 200.5,
+      "ema20": 193.75,
+      "ema50": 180.0,
+      "ema20_weekly": 166.13,
+      "ema50_weekly": 153.71,
+      "ema20_h4": 199.13,
+      "ema50_h4": 190.83,
+      "h4_close": 200.5,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.3,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 12,
+      "extension_points": 9,
+      "bounce_body_atr": 0.27,
+      "daily_extension_atr": 1.05,
+      "return_60d_pct": 60.95,
+      "directional_return_60d_pct": 60.95,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 0.684
     },
     {
       "ticker": "MSFT",
@@ -3063,6 +3282,80 @@
       "ema20_distance_h4_pct": 1.728
     },
     {
+      "ticker": "IQV",
+      "sector": "Healthcare",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 79,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 271.04,
+      "ema20": 263.43,
+      "ema50": 254.47,
+      "ema20_weekly": 235.45,
+      "ema50_weekly": 213.96,
+      "ema20_h4": 263.59,
+      "ema50_h4": 262.8,
+      "h4_close": 271.23,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.03,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 12,
+      "extension_points": 9,
+      "bounce_body_atr": 0.28,
+      "daily_extension_atr": 1.02,
+      "return_60d_pct": 36.53,
+      "directional_return_60d_pct": 36.53,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 2.816
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 79,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 200.5,
+      "ema20": 193.75,
+      "ema50": 180.0,
+      "ema20_weekly": 166.13,
+      "ema50_weekly": 153.71,
+      "ema20_h4": 199.13,
+      "ema50_h4": 190.83,
+      "h4_close": 200.5,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.3,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 12,
+      "extension_points": 9,
+      "bounce_body_atr": 0.27,
+      "daily_extension_atr": 1.05,
+      "return_60d_pct": 60.95,
+      "directional_return_60d_pct": 60.95,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 0.684
+    },
+    {
       "ticker": "TMUS",
       "sector": "Communication",
       "direction": "SHORT",
@@ -3279,30 +3572,28 @@
       "ticker": "CEG",
       "sector": "Utilities",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 279.0,
-      "ema50": 274.74,
+      "close": 275.0,
+      "ema20": 278.61,
+      "ema50": 274.75,
       "ema20_weekly": 275.59,
       "ema50_weekly": 285.83,
       "ema20_h4": 282.43,
       "ema50_h4": 277.63,
-      "return_60d_pct": NaN,
+      "return_60d_pct": 0.19,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 8,
-      "short_score": 18,
+      "short_score": 33,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -3310,27 +3601,25 @@
       "ticker": "OKLO",
       "sector": "Utilities",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 35.71,
-      "ema50": 39.41,
+      "close": 30.01,
+      "ema20": 35.16,
+      "ema50": 39.04,
       "ema20_weekly": 45.3,
       "ema50_weekly": 55.66,
       "ema20_h4": 33.14,
       "ema50_h4": 35.88,
-      "return_60d_pct": NaN,
+      "return_60d_pct": -32.56,
       "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
+      "short_status": "Trend OK",
       "long_score": 0,
-      "short_score": 25,
+      "short_score": 45,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
         "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
@@ -3340,29 +3629,25 @@
       "ticker": "VST",
       "sector": "Utilities",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 150.2,
-      "ema50": 147.7,
+      "close": 154.17,
+      "ema20": 150.58,
+      "ema50": 147.95,
       "ema20_weekly": 149.14,
       "ema50_weekly": 155.27,
       "ema20_h4": 153.84,
       "ema50_h4": 149.46,
-      "return_60d_pct": NaN,
+      "return_60d_pct": -7.39,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 35,
+      "long_score": 70,
       "short_score": 8,
       "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     }
@@ -3563,6 +3848,32 @@
       "short_failed_conditions": []
     },
     {
+      "ticker": "ABNB",
+      "sector": "Consumer Discretionary",
+      "data_ok": true,
+      "close": 174.28,
+      "ema20": 165.06,
+      "ema50": 164.83,
+      "ema20_weekly": 159.99,
+      "ema50_weekly": 147.44,
+      "ema20_h4": 165.35,
+      "ema50_h4": 165.18,
+      "return_60d_pct": 24.44,
+      "long_status": "Trend OK",
+      "short_status": "Trend invalidated",
+      "long_score": 81,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "TRV",
       "sector": "Financials",
       "data_ok": true,
@@ -3604,6 +3915,54 @@
       "short_status": "Trend invalidated",
       "long_score": 81,
       "short_score": 3,
+      "long_failed_conditions": [],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "data_ok": true,
+      "close": 200.5,
+      "ema20": 193.75,
+      "ema50": 180.0,
+      "ema20_weekly": 166.13,
+      "ema50_weekly": 153.71,
+      "ema20_h4": 199.13,
+      "ema50_h4": 190.83,
+      "return_60d_pct": 60.95,
+      "long_status": "Confirmed setup",
+      "short_status": "Trend invalidated",
+      "long_score": 79,
+      "short_score": 3,
+      "long_failed_conditions": [],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "IQV",
+      "sector": "Healthcare",
+      "data_ok": true,
+      "close": 271.04,
+      "ema20": 263.43,
+      "ema50": 254.47,
+      "ema20_weekly": 235.45,
+      "ema50_weekly": 213.96,
+      "ema20_h4": 263.59,
+      "ema50_h4": 262.8,
+      "return_60d_pct": 36.53,
+      "long_status": "Confirmed setup",
+      "short_status": "Trend invalidated",
+      "long_score": 79,
+      "short_score": 8,
       "long_failed_conditions": [],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -3711,6 +4070,32 @@
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": []
+    },
+    {
+      "ticker": "CARR",
+      "sector": "Industrials",
+      "data_ok": true,
+      "close": 54.96,
+      "ema20": 55.6,
+      "ema50": 57.89,
+      "ema20_weekly": 60.5,
+      "ema50_weekly": 61.92,
+      "ema20_h4": 55.1,
+      "ema50_h4": 55.91,
+      "return_60d_pct": -19.3,
+      "long_status": "Trend invalidated",
+      "short_status": "Pullback waiting",
+      "long_score": 8,
+      "short_score": 77,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ]
     },
     {
       "ticker": "LEN",
@@ -3917,6 +4302,32 @@
       ]
     },
     {
+      "ticker": "SPOT",
+      "sector": "Communication",
+      "data_ok": true,
+      "close": 533.37,
+      "ema20": 516.04,
+      "ema50": 513.54,
+      "ema20_weekly": 506.7,
+      "ema50_weekly": 521.13,
+      "ema20_h4": 518.54,
+      "ema50_h4": 515.7,
+      "return_60d_pct": 12.49,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 75,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "ICE",
       "sector": "Financials",
       "data_ok": true,
@@ -3931,6 +4342,32 @@
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 75,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "RBLX",
+      "sector": "Communication",
+      "data_ok": true,
+      "close": 51.13,
+      "ema20": 46.72,
+      "ema50": 45.63,
+      "ema20_weekly": 46.99,
+      "ema50_weekly": 57.99,
+      "ema20_h4": 47.64,
+      "ema50_h4": 46.25,
+      "return_60d_pct": 3.0,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 74,
       "short_score": 3,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
@@ -3960,6 +4397,32 @@
       "short_score": 3,
       "long_failed_conditions": [
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "PYPL",
+      "sector": "Financials",
+      "data_ok": true,
+      "close": 57.16,
+      "ema20": 54.97,
+      "ema50": 54.54,
+      "ema20_weekly": 53.02,
+      "ema50_weekly": 54.38,
+      "ema20_h4": 55.4,
+      "ema50_h4": 54.92,
+      "return_60d_pct": 3.23,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 74,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -4099,6 +4562,32 @@
       ]
     },
     {
+      "ticker": "CTVA",
+      "sector": "Materials",
+      "data_ok": true,
+      "close": 12.88,
+      "ema20": 12.87,
+      "ema50": 12.58,
+      "ema20_weekly": 12.24,
+      "ema50_weekly": 11.66,
+      "ema20_h4": 13.09,
+      "ema50_h4": 12.79,
+      "return_60d_pct": -2.83,
+      "long_status": "Pullback waiting",
+      "short_status": "Trend invalidated",
+      "long_score": 73,
+      "short_score": 17,
+      "long_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "MDT",
       "sector": "Healthcare",
       "data_ok": true,
@@ -4116,6 +4605,84 @@
       "short_score": 3,
       "long_failed_conditions": [
         "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "META",
+      "sector": "Communication",
+      "data_ok": true,
+      "close": 736.72,
+      "ema20": 720.51,
+      "ema50": 677.55,
+      "ema20_weekly": 641.65,
+      "ema50_weekly": 635.13,
+      "ema20_h4": 735.82,
+      "ema50_h4": 712.1,
+      "return_60d_pct": 17.56,
+      "long_status": "Pullback waiting",
+      "short_status": "Trend invalidated",
+      "long_score": 71,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "SNAP",
+      "sector": "Communication",
+      "data_ok": true,
+      "close": 6.44,
+      "ema20": 5.89,
+      "ema50": 5.61,
+      "ema20_weekly": 5.44,
+      "ema50_weekly": 6.01,
+      "ema20_h4": 6.07,
+      "ema50_h4": 5.81,
+      "return_60d_pct": 44.07,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 71,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "VST",
+      "sector": "Utilities",
+      "data_ok": true,
+      "close": 154.17,
+      "ema20": 150.58,
+      "ema50": 147.95,
+      "ema20_weekly": 149.14,
+      "ema50_weekly": 155.27,
+      "ema20_h4": 153.84,
+      "ema50_h4": 149.46,
+      "return_60d_pct": -7.39,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 70,
+      "short_score": 8,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -4382,6 +4949,32 @@
       ]
     },
     {
+      "ticker": "NOW",
+      "sector": "Technology",
+      "data_ok": true,
+      "close": 148.57,
+      "ema20": 138.43,
+      "ema50": 132.49,
+      "ema20_weekly": 124.93,
+      "ema50_weekly": 129.92,
+      "ema20_h4": 140.24,
+      "ema50_h4": 137.45,
+      "return_60d_pct": 55.64,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 66,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "ISRG",
       "sector": "Healthcare",
       "data_ok": true,
@@ -4619,6 +5212,32 @@
       ]
     },
     {
+      "ticker": "FANG",
+      "sector": "Energy",
+      "data_ok": true,
+      "close": 195.6,
+      "ema20": 192.11,
+      "ema50": 193.64,
+      "ema20_weekly": 191.76,
+      "ema50_weekly": 180.84,
+      "ema20_h4": 192.78,
+      "ema50_h4": 192.62,
+      "return_60d_pct": -3.12,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 65,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "GILD",
       "sector": "Healthcare",
       "data_ok": true,
@@ -4630,6 +5249,33 @@
       "ema20_h4": 150.81,
       "ema50_h4": 148.86,
       "return_60d_pct": 21.42,
+      "long_status": "Pullback waiting",
+      "short_status": "Trend invalidated",
+      "long_score": 65,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "MRNA",
+      "sector": "Healthcare",
+      "data_ok": true,
+      "close": 236.5,
+      "ema20": 197.21,
+      "ema50": 159.87,
+      "ema20_weekly": 121.08,
+      "ema50_weekly": 81.5,
+      "ema20_h4": 212.32,
+      "ema50_h4": 189.46,
+      "return_60d_pct": 307.27,
       "long_status": "Pullback waiting",
       "short_status": "Trend invalidated",
       "long_score": 65,
@@ -4723,34 +5369,6 @@
       ],
       "short_failed_conditions": [
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
-      ]
-    },
-    {
-      "ticker": "ABNB",
-      "sector": "Consumer Discretionary",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 164.09,
-      "ema50": 164.44,
-      "ema20_weekly": 159.99,
-      "ema50_weekly": 147.44,
-      "ema20_h4": 165.35,
-      "ema50_h4": 165.18,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 61,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
       ]
     },
     {
@@ -5412,6 +6030,33 @@
       ]
     },
     {
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "data_ok": true,
+      "close": 71.27,
+      "ema20": 70.45,
+      "ema50": 71.65,
+      "ema20_weekly": 72.93,
+      "ema50_weekly": 75.87,
+      "ema20_h4": 70.12,
+      "ema50_h4": 70.57,
+      "return_60d_pct": 1.34,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 54,
+      "short_score": 18,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "GLW",
       "sector": "Technology",
       "data_ok": true,
@@ -5661,35 +6306,6 @@
       ]
     },
     {
-      "ticker": "FANG",
-      "sector": "Energy",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 191.74,
-      "ema50": 193.56,
-      "ema20_weekly": 191.76,
-      "ema50_weekly": 180.84,
-      "ema20_h4": 192.78,
-      "ema50_h4": 192.62,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 52,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "ETR",
       "sector": "Utilities",
       "data_ok": true,
@@ -5769,35 +6385,6 @@
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "PLTR",
-      "sector": "Technology",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 193.04,
-      "ema50": 179.17,
-      "ema20_weekly": 166.13,
-      "ema50_weekly": 153.71,
-      "ema20_h4": 199.13,
-      "ema50_h4": 190.83,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 50,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -5915,36 +6502,6 @@
       ]
     },
     {
-      "ticker": "RBLX",
-      "sector": "Communication",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 46.25,
-      "ema50": 45.41,
-      "ema20_weekly": 46.99,
-      "ema50_weekly": 57.99,
-      "ema20_h4": 47.64,
-      "ema50_h4": 46.25,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 50,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "AZO",
       "sector": "Consumer Discretionary",
       "data_ok": true,
@@ -5975,28 +6532,26 @@
       "ticker": "BURL",
       "sector": "Consumer Discretionary",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 267.7,
-      "ema50": 281.63,
+      "close": 267.79,
+      "ema20": 267.71,
+      "ema50": 281.08,
       "ema20_weekly": 296.42,
       "ema50_weekly": 298.83,
       "ema20_h4": 268.03,
       "ema50_h4": 268.99,
-      "return_60d_pct": NaN,
+      "return_60d_pct": -24.35,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 8,
+      "long_score": 23,
       "short_score": 50,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -6058,36 +6613,6 @@
       ]
     },
     {
-      "ticker": "PYPL",
-      "sector": "Financials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 54.74,
-      "ema50": 54.44,
-      "ema20_weekly": 53.02,
-      "ema50_weekly": 54.38,
-      "ema20_h4": 55.4,
-      "ema50_h4": 54.92,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 50,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "MCO",
       "sector": "Financials",
       "data_ok": true,
@@ -6116,35 +6641,6 @@
       ]
     },
     {
-      "ticker": "IQV",
-      "sector": "Healthcare",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 262.63,
-      "ema50": 253.79,
-      "ema20_weekly": 235.45,
-      "ema50_weekly": 213.96,
-      "ema20_h4": 263.59,
-      "ema50_h4": 262.8,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 50,
-      "short_score": 8,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "WM",
       "sector": "Industrials",
       "data_ok": true,
@@ -6169,6 +6665,35 @@
       "short_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "sector": "Industrials",
+      "data_ok": true,
+      "close": 214.75,
+      "ema20": 242.33,
+      "ema50": 255.55,
+      "ema20_weekly": 269.15,
+      "ema50_weekly": 247.79,
+      "ema20_h4": 235.08,
+      "ema50_h4": 244.58,
+      "return_60d_pct": -28.67,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 3,
+      "short_score": 50,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -6282,6 +6807,34 @@
       ]
     },
     {
+      "ticker": "DASH",
+      "sector": "Consumer Discretionary",
+      "data_ok": true,
+      "close": 193.05,
+      "ema20": 192.9,
+      "ema50": 196.41,
+      "ema20_weekly": 195.0,
+      "ema50_weekly": 194.18,
+      "ema20_h4": 190.21,
+      "ema50_h4": 193.47,
+      "return_60d_pct": 8.62,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 49,
+      "short_score": 23,
+      "long_failed_conditions": [
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "MDLZ",
       "sector": "Consumer Staples",
       "data_ok": true,
@@ -6300,6 +6853,33 @@
       "long_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "PSX",
+      "sector": "Energy",
+      "data_ok": true,
+      "close": 289.2,
+      "ema20": 272.63,
+      "ema50": 253.49,
+      "ema20_weekly": 227.5,
+      "ema50_weekly": 190.0,
+      "ema20_h4": 281.07,
+      "ema50_h4": 269.47,
+      "return_60d_pct": 37.52,
+      "long_status": "Trend OK",
+      "short_status": "Trend invalidated",
+      "long_score": 49,
+      "short_score": 0,
+      "long_failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
@@ -6364,6 +6944,34 @@
       ]
     },
     {
+      "ticker": "SYF",
+      "sector": "Financials",
+      "data_ok": true,
+      "close": 74.04,
+      "ema20": 73.26,
+      "ema50": 74.45,
+      "ema20_weekly": 74.85,
+      "ema50_weekly": 73.13,
+      "ema20_h4": 72.8,
+      "ema50_h4": 73.47,
+      "return_60d_pct": 2.13,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 49,
+      "short_score": 8,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "CBOE",
       "sector": "Financials",
       "data_ok": true,
@@ -6414,6 +7022,33 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "AA",
+      "sector": "Materials",
+      "data_ok": true,
+      "close": 40.42,
+      "ema20": 42.96,
+      "ema50": 46.04,
+      "ema20_weekly": 49.8,
+      "ema50_weekly": 50.65,
+      "ema20_h4": 41.67,
+      "ema50_h4": 43.48,
+      "return_60d_pct": -12.28,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend OK",
+      "long_score": 0,
+      "short_score": 49,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -6615,36 +7250,6 @@
       ]
     },
     {
-      "ticker": "SNAP",
-      "sector": "Communication",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 5.83,
-      "ema50": 5.57,
-      "ema20_weekly": 5.44,
-      "ema50_weekly": 6.01,
-      "ema20_h4": 6.07,
-      "ema50_h4": 5.81,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 47,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "SBUX",
       "sector": "Consumer Discretionary",
       "data_ok": true,
@@ -6698,36 +7303,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "SPOT",
-      "sector": "Communication",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 514.22,
-      "ema50": 512.73,
-      "ema20_weekly": 506.7,
-      "ema50_weekly": 521.13,
-      "ema20_h4": 518.54,
-      "ema50_h4": 515.7,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 46,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -6985,6 +7560,34 @@
       ]
     },
     {
+      "ticker": "OKLO",
+      "sector": "Utilities",
+      "data_ok": true,
+      "close": 30.01,
+      "ema20": 35.16,
+      "ema50": 39.04,
+      "ema20_weekly": 45.3,
+      "ema50_weekly": 55.66,
+      "ema20_h4": 33.14,
+      "ema50_h4": 35.88,
+      "return_60d_pct": -32.56,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend OK",
+      "long_score": 0,
+      "short_score": 45,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "HPQ",
       "sector": "Technology",
       "data_ok": true,
@@ -7125,6 +7728,33 @@
       ]
     },
     {
+      "ticker": "KHC",
+      "sector": "Consumer Staples",
+      "data_ok": true,
+      "close": 23.28,
+      "ema20": 23.02,
+      "ema50": 23.7,
+      "ema20_weekly": 23.86,
+      "ema50_weekly": 23.94,
+      "ema20_h4": 22.68,
+      "ema50_h4": 23.22,
+      "return_60d_pct": -8.89,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 45,
+      "short_score": 18,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "MPC",
       "sector": "Energy",
       "data_ok": true,
@@ -7205,36 +7835,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "MRNA",
-      "sector": "Healthcare",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 193.07,
-      "ema50": 156.74,
-      "ema20_weekly": 121.08,
-      "ema50_weekly": 81.5,
-      "ema20_h4": 212.32,
-      "ema50_h4": 189.46,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 45,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -7334,6 +7934,34 @@
       "ema20_h4": 101.09,
       "ema50_h4": 107.63,
       "return_60d_pct": -16.13,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend OK",
+      "long_score": 0,
+      "short_score": 45,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "TE",
+      "sector": "Utilities",
+      "data_ok": true,
+      "close": 2.93,
+      "ema20": 3.63,
+      "ema50": 4.33,
+      "ema20_weekly": 5.16,
+      "ema50_weekly": 5.24,
+      "ema20_h4": 3.31,
+      "ema50_h4": 3.74,
+      "return_60d_pct": -51.41,
       "long_status": "Trend invalidated",
       "short_status": "Trend OK",
       "long_score": 0,
@@ -7490,6 +8118,33 @@
       ]
     },
     {
+      "ticker": "TTD",
+      "sector": "Communication",
+      "data_ok": true,
+      "close": 13.13,
+      "ema20": 12.62,
+      "ema50": 13.88,
+      "ema20_weekly": 16.41,
+      "ema50_weekly": 27.5,
+      "ema20_h4": 12.33,
+      "ema50_h4": 12.77,
+      "return_60d_pct": -25.31,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 43,
+      "short_score": 18,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "MCD",
       "sector": "Consumer Discretionary",
       "data_ok": true,
@@ -7629,66 +8284,6 @@
       ]
     },
     {
-      "ticker": "NOW",
-      "sector": "Technology",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 137.36,
-      "ema50": 131.83,
-      "ema20_weekly": 124.93,
-      "ema50_weekly": 129.92,
-      "ema20_h4": 140.24,
-      "ema50_h4": 137.45,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 42,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "CARR",
-      "sector": "Industrials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 55.67,
-      "ema50": 58.01,
-      "ema20_weekly": 60.5,
-      "ema50_weekly": 61.92,
-      "ema20_h4": 55.1,
-      "ema50_h4": 55.91,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 8,
-      "short_score": 42,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "GS",
       "sector": "Financials",
       "data_ok": true,
@@ -7767,6 +8362,35 @@
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "IR",
+      "sector": "Industrials",
+      "data_ok": true,
+      "close": 77.87,
+      "ema20": 77.16,
+      "ema50": 77.52,
+      "ema20_weekly": 78.43,
+      "ema50_weekly": 80.4,
+      "ema20_h4": 77.9,
+      "ema50_h4": 77.19,
+      "return_60d_pct": -6.77,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 42,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
         "Ponizej progu punktowego 60"
@@ -8108,31 +8732,30 @@
       ]
     },
     {
-      "ticker": "UBER",
-      "sector": "Industrials",
+      "ticker": "HOOD",
+      "sector": "Financials",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 70.37,
-      "ema50": 71.66,
-      "ema20_weekly": 72.93,
-      "ema50_weekly": 75.87,
-      "ema20_h4": 70.12,
-      "ema50_h4": 70.57,
-      "return_60d_pct": NaN,
+      "close": 103.99,
+      "ema20": 110.38,
+      "ema50": 108.59,
+      "ema20_weekly": 104.54,
+      "ema50_weekly": 97.36,
+      "ema20_h4": 108.23,
+      "ema50_h4": 110.54,
+      "return_60d_pct": -0.47,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 39,
-      "short_score": 18,
+      "long_score": 18,
+      "short_score": 39,
       "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -8275,66 +8898,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "META",
-      "sector": "Communication",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 718.8,
-      "ema50": 675.13,
-      "ema20_weekly": 641.65,
-      "ema50_weekly": 635.13,
-      "ema20_h4": 735.82,
-      "ema50_h4": 712.1,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 38,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "CTVA",
-      "sector": "Materials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 12.87,
-      "ema50": 12.57,
-      "ema20_weekly": 12.24,
-      "ema50_weekly": 11.66,
-      "ema20_h4": 13.09,
-      "ema50_h4": 12.79,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 38,
-      "short_score": 17,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -8564,36 +9127,6 @@
       ]
     },
     {
-      "ticker": "VST",
-      "sector": "Utilities",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 150.2,
-      "ema50": 147.7,
-      "ema20_weekly": 149.14,
-      "ema50_weekly": 155.27,
-      "ema20_h4": 153.84,
-      "ema50_h4": 149.46,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 35,
-      "short_score": 8,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "SPG",
       "sector": "Real Estate",
       "data_ok": true,
@@ -8651,61 +9184,30 @@
       ]
     },
     {
-      "ticker": "TTD",
-      "sector": "Communication",
+      "ticker": "ARM",
+      "sector": "Technology",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 12.57,
-      "ema50": 13.91,
-      "ema20_weekly": 16.41,
-      "ema50_weekly": 27.5,
-      "ema20_h4": 12.33,
-      "ema50_h4": 12.77,
-      "return_60d_pct": NaN,
+      "close": 244.79,
+      "ema20": 273.42,
+      "ema50": 274.55,
+      "ema20_weekly": 270.13,
+      "ema50_weekly": 229.88,
+      "ema20_h4": 265.19,
+      "ema50_h4": 273.89,
+      "return_60d_pct": -13.62,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 34,
-      "short_score": 18,
+      "long_score": 0,
+      "short_score": 34,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "DASH",
-      "sector": "Consumer Discretionary",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 192.89,
-      "ema50": 196.55,
-      "ema20_weekly": 195.0,
-      "ema50_weekly": 194.18,
-      "ema20_h4": 190.21,
-      "ema50_h4": 193.47,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 34,
-      "short_score": 23,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -8738,36 +9240,6 @@
       ]
     },
     {
-      "ticker": "SYF",
-      "sector": "Financials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 73.17,
-      "ema50": 74.47,
-      "ema20_weekly": 74.85,
-      "ema50_weekly": 73.13,
-      "ema20_h4": 72.8,
-      "ema50_h4": 73.47,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 34,
-      "short_score": 8,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "SHW",
       "sector": "Materials",
       "data_ok": true,
@@ -8791,6 +9263,34 @@
       "short_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "GOLD",
+      "sector": "Materials",
+      "data_ok": true,
+      "close": 39.63,
+      "ema20": 41.7,
+      "ema50": 42.47,
+      "ema20_weekly": 42.65,
+      "ema50_weekly": 39.9,
+      "ema20_h4": 40.64,
+      "ema50_h4": 42.23,
+      "return_60d_pct": 1.1,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 0,
+      "short_score": 34,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -8908,6 +9408,35 @@
       ]
     },
     {
+      "ticker": "CEG",
+      "sector": "Utilities",
+      "data_ok": true,
+      "close": 275.0,
+      "ema20": 278.61,
+      "ema50": 274.75,
+      "ema20_weekly": 275.59,
+      "ema50_weekly": 285.83,
+      "ema20_h4": 282.43,
+      "ema50_h4": 277.63,
+      "return_60d_pct": 0.19,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 8,
+      "short_score": 33,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "TXN",
       "sector": "Technology",
       "data_ok": true,
@@ -8953,6 +9482,34 @@
       "short_score": 31,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "sector": "Technology",
+      "data_ok": true,
+      "close": 244.57,
+      "ema20": 255.28,
+      "ema50": 236.0,
+      "ema20_weekly": 208.4,
+      "ema50_weekly": 168.07,
+      "ema20_h4": 258.73,
+      "ema50_h4": 251.99,
+      "return_60d_pct": 29.8,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 18,
+      "short_score": 31,
+      "long_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
         "Ponizej progu punktowego 60"
@@ -9045,36 +9602,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "HOOD",
-      "sector": "Financials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 111.05,
-      "ema50": 108.78,
-      "ema20_weekly": 104.54,
-      "ema50_weekly": 97.36,
-      "ema20_h4": 108.23,
-      "ema50_h4": 110.54,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 18,
-      "short_score": 30,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -9339,6 +9866,35 @@
       ]
     },
     {
+      "ticker": "RIVN",
+      "sector": "Consumer Discretionary",
+      "data_ok": true,
+      "close": 13.02,
+      "ema20": 14.32,
+      "ema50": 15.09,
+      "ema20_weekly": 15.61,
+      "ema50_weekly": 15.49,
+      "ema20_h4": 13.77,
+      "ema50_h4": 14.5,
+      "return_60d_pct": -24.21,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 0,
+      "short_score": 30,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "WMT",
       "sector": "Consumer Staples",
       "data_ok": true,
@@ -9393,35 +9949,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "KHC",
-      "sector": "Consumer Staples",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 22.99,
-      "ema50": 23.72,
-      "ema20_weekly": 23.86,
-      "ema50_weekly": 23.94,
-      "ema20_h4": 22.68,
-      "ema50_h4": 23.22,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 30,
-      "short_score": 18,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -9481,37 +10008,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "VRT",
-      "sector": "Industrials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 245.23,
-      "ema50": 257.21,
-      "ema20_weekly": 269.15,
-      "ema50_weekly": 247.79,
-      "ema20_h4": 235.08,
-      "ema50_h4": 244.58,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 3,
-      "short_score": 30,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -9605,29 +10101,27 @@
       "ticker": "P",
       "sector": "Consumer Discretionary",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 135.37,
-      "ema50": 116.82,
+      "close": 133.4,
+      "ema20": 135.18,
+      "ema50": 117.47,
       "ema20_weekly": 101.47,
       "ema50_weekly": 85.57,
       "ema20_h4": 142.89,
       "ema50_h4": 131.18,
-      "return_60d_pct": NaN,
+      "return_60d_pct": 78.87,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 28,
-      "short_score": 3,
+      "short_score": 18,
       "long_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -9692,60 +10186,55 @@
       "ticker": "VICI",
       "sector": "Real Estate",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 23.26,
-      "ema50": 24.19,
+      "close": 23.46,
+      "ema20": 23.28,
+      "ema50": 24.16,
       "ema20_weekly": 25.14,
       "ema50_weekly": 26.42,
       "ema20_h4": 23.06,
       "ema50_h4": 23.54,
-      "return_60d_pct": NaN,
+      "return_60d_pct": -10.05,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 13,
+      "long_score": 28,
       "short_score": 28,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
     {
-      "ticker": "IR",
-      "sector": "Industrials",
+      "ticker": "PANW",
+      "sector": "Technology",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 77.08,
-      "ema50": 77.5,
-      "ema20_weekly": 78.43,
-      "ema50_weekly": 80.4,
-      "ema20_h4": 77.9,
-      "ema50_h4": 77.19,
-      "return_60d_pct": NaN,
+      "close": 370.27,
+      "ema20": 388.87,
+      "ema50": 370.96,
+      "ema20_weekly": 336.13,
+      "ema50_weekly": 275.77,
+      "ema20_h4": 391.76,
+      "ema50_h4": 385.84,
+      "return_60d_pct": 10.44,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 27,
-      "short_score": 3,
+      "long_score": 18,
+      "short_score": 27,
       "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -9806,122 +10295,29 @@
       ]
     },
     {
-      "ticker": "OKLO",
-      "sector": "Utilities",
+      "ticker": "HPE",
+      "sector": "Technology",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 35.71,
-      "ema50": 39.41,
-      "ema20_weekly": 45.3,
-      "ema50_weekly": 55.66,
-      "ema20_h4": 33.14,
-      "ema50_h4": 35.88,
-      "return_60d_pct": NaN,
+      "close": 58.63,
+      "ema20": 64.92,
+      "ema50": 59.74,
+      "ema20_weekly": 53.25,
+      "ema50_weekly": 40.75,
+      "ema20_h4": 66.19,
+      "ema50_h4": 64.09,
+      "return_60d_pct": 22.12,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
-      "long_score": 0,
-      "short_score": 25,
+      "long_score": 18,
+      "short_score": 24,
       "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "PSX",
-      "sector": "Energy",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 270.89,
-      "ema50": 252.03,
-      "ema20_weekly": 227.5,
-      "ema50_weekly": 190.0,
-      "ema20_h4": 281.07,
-      "ema50_h4": 269.47,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 25,
-      "short_score": 0,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "AA",
-      "sector": "Materials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 43.23,
-      "ema50": 46.27,
-      "ema20_weekly": 49.8,
-      "ema50_weekly": 50.65,
-      "ema20_h4": 41.67,
-      "ema50_h4": 43.48,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 0,
-      "short_score": 25,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "TE",
-      "sector": "Utilities",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 3.7,
-      "ema50": 4.39,
-      "ema20_weekly": 5.16,
-      "ema50_weekly": 5.24,
-      "ema20_h4": 3.31,
-      "ema50_h4": 3.74,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 0,
-      "short_score": 25,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -9929,14 +10325,14 @@
       "ticker": "DELL",
       "sector": "Technology",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 551.5,
-      "ema50": 514.55,
+      "close": 473.39,
+      "ema20": 544.06,
+      "ema50": 512.94,
       "ema20_weekly": 458.6,
       "ema50_weekly": 333.8,
       "ema20_h4": 540.96,
       "ema50_h4": 540.6,
-      "return_60d_pct": NaN,
+      "return_60d_pct": 7.15,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 18,
@@ -9944,7 +10340,6 @@
       "long_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
@@ -9985,35 +10380,6 @@
       ]
     },
     {
-      "ticker": "HPE",
-      "sector": "Technology",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 65.58,
-      "ema50": 59.79,
-      "ema20_weekly": 53.25,
-      "ema50_weekly": 40.75,
-      "ema20_h4": 66.19,
-      "ema50_h4": 64.09,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 18,
-      "short_score": 20,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "PPL",
       "sector": "Utilities",
       "data_ok": true,
@@ -10045,14 +10411,14 @@
       "ticker": "ANET",
       "sector": "Technology",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 205.12,
-      "ema50": 197.44,
+      "close": 185.58,
+      "ema20": 203.26,
+      "ema50": 196.98,
       "ema20_weekly": 186.35,
       "ema50_weekly": 163.04,
       "ema20_h4": 202.62,
       "ema50_h4": 202.43,
-      "return_60d_pct": NaN,
+      "return_60d_pct": 6.12,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 18,
@@ -10060,98 +10426,6 @@
       "long_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "sector": "Technology",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 390.83,
-      "ema50": 370.98,
-      "ema20_weekly": 336.13,
-      "ema50_weekly": 275.77,
-      "ema20_h4": 391.76,
-      "ema50_h4": 385.84,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 18,
-      "short_score": 18,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "sector": "Technology",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 256.41,
-      "ema50": 235.65,
-      "ema20_weekly": 208.4,
-      "ema50_weekly": 168.07,
-      "ema20_h4": 258.73,
-      "ema50_h4": 251.99,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 18,
-      "short_score": 18,
-      "long_failed_conditions": [
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "CEG",
-      "sector": "Utilities",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 279.0,
-      "ema50": 274.74,
-      "ema20_weekly": 275.59,
-      "ema50_weekly": 285.83,
-      "ema20_h4": 282.43,
-      "ema50_h4": 277.63,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 8,
-      "short_score": 18,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ],
       "short_failed_conditions": [
@@ -10282,14 +10556,14 @@
       "ticker": "ZTS",
       "sector": "Healthcare",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 72.92,
-      "ema50": 74.11,
+      "close": 78.42,
+      "ema20": 73.44,
+      "ema50": 74.28,
       "ema20_weekly": 79.07,
       "ema50_weekly": 98.02,
       "ema20_h4": 74.36,
       "ema50_h4": 73.4,
-      "return_60d_pct": NaN,
+      "return_60d_pct": 5.7,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 10,
@@ -10304,38 +10578,6 @@
       "short_failed_conditions": [
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "sector": "Technology",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 276.43,
-      "ema50": 275.77,
-      "ema20_weekly": 270.13,
-      "ema50_weekly": 229.88,
-      "ema20_h4": 265.19,
-      "ema50_h4": 273.89,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 0,
-      "short_score": 10,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -10343,14 +10585,14 @@
       "ticker": "PINS",
       "sector": "Communication",
       "data_ok": true,
-      "close": NaN,
-      "ema20": 20.37,
-      "ema50": 20.7,
+      "close": 22.71,
+      "ema20": 20.59,
+      "ema50": 20.77,
       "ema20_weekly": 21.08,
       "ema50_weekly": 22.96,
       "ema20_h4": 21.11,
       "ema50_h4": 20.48,
-      "return_60d_pct": NaN,
+      "return_60d_pct": 0.75,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 10,
@@ -10366,38 +10608,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "RIVN",
-      "sector": "Consumer Discretionary",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 14.46,
-      "ema50": 15.17,
-      "ema20_weekly": 15.61,
-      "ema50_weekly": 15.49,
-      "ema20_h4": 13.77,
-      "ema50_h4": 14.5,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 0,
-      "short_score": 10,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
@@ -10428,37 +10638,6 @@
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "GOLD",
-      "sector": "Materials",
-      "data_ok": true,
-      "close": NaN,
-      "ema20": 41.92,
-      "ema50": 42.59,
-      "ema20_weekly": 42.65,
-      "ema50_weekly": 39.9,
-      "ema20_h4": 40.64,
-      "ema50_h4": 42.23,
-      "return_60d_pct": NaN,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 0,
-      "short_score": 10,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: brak korekty w okolice EMA20/EMA50 w ostatnich swiecach",
-        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu",
         "Ponizej progu punktowego 60"
       ]
     },
