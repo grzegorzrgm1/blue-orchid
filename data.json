@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30 07:17 UTC",
+  "updated": "2026-10-30 13:13 UTC",
   "strategy_version": "Swing Scanner V2 - EMA20/EMA50 LONG/SHORT",
   "universe_count": 261,
   "scanned_count": 256,
@@ -175,7 +175,7 @@
       "ema50_weekly": 471.96,
       "ema20_h4": 479.09,
       "ema50_h4": 474.4,
-      "h4_close": 488.75,
+      "h4_close": 488.74,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
@@ -186,14 +186,14 @@
       "pullback_points": 17,
       "bounce_points": 16,
       "extension_points": 13,
-      "bounce_body_atr": 0.56,
+      "bounce_body_atr": 0.55,
       "daily_extension_atr": 0.93,
       "return_60d_pct": 1.22,
       "directional_return_60d_pct": 1.22,
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.977
+      "ema20_distance_h4_pct": 1.975
     },
     {
       "ticker": "CME",
@@ -230,7 +230,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.33
+      "ema20_distance_h4_pct": 0.331
     },
     {
       "ticker": "PFE",
@@ -285,7 +285,7 @@
       "ema20_weekly": 214.58,
       "ema50_weekly": 214.34,
       "ema20_h4": 224.68,
-      "ema50_h4": 220.27,
+      "ema50_h4": 220.28,
       "h4_close": 230.17,
       "h4_invalidated": false,
       "pullback": true,
@@ -321,14 +321,14 @@
       "ema50": 508.77,
       "ema20_weekly": 481.26,
       "ema50_weekly": 457.22,
-      "ema20_h4": 529.5,
-      "ema50_h4": 524.85,
+      "ema20_h4": 529.57,
+      "ema50_h4": 524.88,
       "h4_close": 530.43,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 1.37,
+      "pullback_atr": 1.38,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 13,
@@ -341,7 +341,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.175
+      "ema20_distance_h4_pct": 0.162
     },
     {
       "ticker": "PM",
@@ -378,7 +378,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.022
+      "ema20_distance_h4_pct": 3.021
     },
     {
       "ticker": "CB",
@@ -408,7 +408,7 @@
       "pullback_points": 20,
       "bounce_points": 20,
       "extension_points": 4,
-      "bounce_body_atr": 0.69,
+      "bounce_body_atr": 0.66,
       "daily_extension_atr": 1.65,
       "return_60d_pct": 3.07,
       "directional_return_60d_pct": 3.07,
@@ -452,7 +452,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 2.305
+      "ema20_distance_h4_pct": 2.304
     },
     {
       "ticker": "LIN",
@@ -692,7 +692,7 @@
       "ema20_weekly": 241.17,
       "ema50_weekly": 227.17,
       "ema20_h4": 250.06,
-      "ema50_h4": 245.04,
+      "ema50_h4": 245.0,
       "h4_close": 255.93,
       "h4_invalidated": false,
       "pullback": true,
@@ -803,7 +803,7 @@
       "ema20_weekly": 501.66,
       "ema50_weekly": 479.27,
       "ema20_h4": 522.2,
-      "ema50_h4": 517.26,
+      "ema50_h4": 517.25,
       "h4_close": 540.21,
       "h4_invalidated": false,
       "pullback": true,
@@ -933,7 +933,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.01
+      "ema20_distance_h4_pct": 1.009
     },
     {
       "ticker": "AIG",
@@ -1098,8 +1098,8 @@
       "ema50": 375.31,
       "ema20_weekly": 359.86,
       "ema50_weekly": 328.01,
-      "ema20_h4": 393.74,
-      "ema50_h4": 384.32,
+      "ema20_h4": 393.73,
+      "ema50_h4": 384.31,
       "h4_close": 398.33,
       "h4_invalidated": false,
       "pullback": true,
@@ -1118,7 +1118,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.152
+      "ema20_distance_h4_pct": 1.154
     },
     {
       "ticker": "STLD",
@@ -1229,7 +1229,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 2.279
+      "ema20_distance_h4_pct": 2.278
     },
     {
       "ticker": "FAST",
@@ -1333,14 +1333,14 @@
       "pullback_points": 20,
       "bounce_points": 7,
       "extension_points": 4,
-      "bounce_body_atr": 0.16,
+      "bounce_body_atr": 0.13,
       "daily_extension_atr": 1.56,
       "return_60d_pct": 7.36,
       "directional_return_60d_pct": 7.36,
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.42
+      "ema20_distance_h4_pct": 3.421
     },
     {
       "ticker": "EMR",
@@ -1527,7 +1527,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.281
+      "ema20_distance_h4_pct": 0.28
     },
     {
       "ticker": "VST",
@@ -1692,8 +1692,8 @@
       "ema50": 164.05,
       "ema20_weekly": 172.39,
       "ema50_weekly": 187.73,
-      "ema20_h4": 151.17,
-      "ema50_h4": 157.28,
+      "ema20_h4": 151.15,
+      "ema50_h4": 157.27,
       "h4_close": 147.4,
       "h4_invalidated": false,
       "pullback": true,
@@ -1712,7 +1712,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 2.554
+      "ema20_distance_h4_pct": 2.547
     },
     {
       "ticker": "ALB",
@@ -1766,7 +1766,7 @@
       "ema50": 120.19,
       "ema20_weekly": 135.18,
       "ema50_weekly": 176.27,
-      "ema20_h4": 107.27,
+      "ema20_h4": 107.26,
       "ema50_h4": 111.7,
       "h4_close": 109.0,
       "h4_invalidated": false,
@@ -1827,7 +1827,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 0.683
+      "ema20_distance_h4_pct": 0.685
     },
     {
       "ticker": "FSLR",
@@ -2022,7 +2022,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 0.606
+      "ema20_distance_h4_pct": 0.605
     },
     {
       "ticker": "BSX",
@@ -2091,7 +2091,7 @@
       "pullback_points": 0,
       "bounce_points": 0,
       "extension_points": 9,
-      "bounce_body_atr": 0.32,
+      "bounce_body_atr": 0.31,
       "daily_extension_atr": 1.48,
       "return_60d_pct": -3.58,
       "directional_return_60d_pct": 3.58,
@@ -2101,7 +2101,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 2.143
+      "ema20_distance_h4_pct": 2.142
     },
     {
       "ticker": "BKNG",
@@ -2242,7 +2242,7 @@
       "ema50_weekly": 15.23,
       "ema20_h4": 12.1,
       "ema50_h4": 13.09,
-      "h4_close": 11.47,
+      "h4_close": 11.45,
       "h4_invalidated": false,
       "pullback": false,
       "near_ema20_h4": false,
@@ -2253,7 +2253,7 @@
       "pullback_points": 0,
       "bounce_points": 0,
       "extension_points": 0,
-      "bounce_body_atr": 0.88,
+      "bounce_body_atr": 0.94,
       "daily_extension_atr": 2.81,
       "return_60d_pct": -26.41,
       "directional_return_60d_pct": 26.41,
@@ -2264,7 +2264,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 5.525
+      "ema20_distance_h4_pct": 5.692
     }
   ],
   "long_setups": [
@@ -2433,7 +2433,7 @@
       "ema50_weekly": 471.96,
       "ema20_h4": 479.09,
       "ema50_h4": 474.4,
-      "h4_close": 488.75,
+      "h4_close": 488.74,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
@@ -2444,14 +2444,14 @@
       "pullback_points": 17,
       "bounce_points": 16,
       "extension_points": 13,
-      "bounce_body_atr": 0.56,
+      "bounce_body_atr": 0.55,
       "daily_extension_atr": 0.93,
       "return_60d_pct": 1.22,
       "directional_return_60d_pct": 1.22,
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.977
+      "ema20_distance_h4_pct": 1.975
     },
     {
       "ticker": "CME",
@@ -2488,7 +2488,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.33
+      "ema20_distance_h4_pct": 0.331
     },
     {
       "ticker": "PFE",
@@ -2543,7 +2543,7 @@
       "ema20_weekly": 214.58,
       "ema50_weekly": 214.34,
       "ema20_h4": 224.68,
-      "ema50_h4": 220.27,
+      "ema50_h4": 220.28,
       "h4_close": 230.17,
       "h4_invalidated": false,
       "pullback": true,
@@ -2579,14 +2579,14 @@
       "ema50": 508.77,
       "ema20_weekly": 481.26,
       "ema50_weekly": 457.22,
-      "ema20_h4": 529.5,
-      "ema50_h4": 524.85,
+      "ema20_h4": 529.57,
+      "ema50_h4": 524.88,
       "h4_close": 530.43,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 1.37,
+      "pullback_atr": 1.38,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 13,
@@ -2599,7 +2599,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.175
+      "ema20_distance_h4_pct": 0.162
     },
     {
       "ticker": "PM",
@@ -2636,7 +2636,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.022
+      "ema20_distance_h4_pct": 3.021
     },
     {
       "ticker": "CB",
@@ -2666,7 +2666,7 @@
       "pullback_points": 20,
       "bounce_points": 20,
       "extension_points": 4,
-      "bounce_body_atr": 0.69,
+      "bounce_body_atr": 0.66,
       "daily_extension_atr": 1.65,
       "return_60d_pct": 3.07,
       "directional_return_60d_pct": 3.07,
@@ -2710,7 +2710,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 2.305
+      "ema20_distance_h4_pct": 2.304
     },
     {
       "ticker": "LIN",
@@ -2950,7 +2950,7 @@
       "ema20_weekly": 241.17,
       "ema50_weekly": 227.17,
       "ema20_h4": 250.06,
-      "ema50_h4": 245.04,
+      "ema50_h4": 245.0,
       "h4_close": 255.93,
       "h4_invalidated": false,
       "pullback": true,
@@ -3061,7 +3061,7 @@
       "ema20_weekly": 501.66,
       "ema50_weekly": 479.27,
       "ema20_h4": 522.2,
-      "ema50_h4": 517.26,
+      "ema50_h4": 517.25,
       "h4_close": 540.21,
       "h4_invalidated": false,
       "pullback": true,
@@ -3191,7 +3191,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.01
+      "ema20_distance_h4_pct": 1.009
     },
     {
       "ticker": "AIG",
@@ -3356,8 +3356,8 @@
       "ema50": 375.31,
       "ema20_weekly": 359.86,
       "ema50_weekly": 328.01,
-      "ema20_h4": 393.74,
-      "ema50_h4": 384.32,
+      "ema20_h4": 393.73,
+      "ema50_h4": 384.31,
       "h4_close": 398.33,
       "h4_invalidated": false,
       "pullback": true,
@@ -3376,7 +3376,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.152
+      "ema20_distance_h4_pct": 1.154
     }
   ],
   "short_setups": [
@@ -3415,7 +3415,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.281
+      "ema20_distance_h4_pct": 0.28
     },
     {
       "ticker": "VST",
@@ -3580,8 +3580,8 @@
       "ema50": 164.05,
       "ema20_weekly": 172.39,
       "ema50_weekly": 187.73,
-      "ema20_h4": 151.17,
-      "ema50_h4": 157.28,
+      "ema20_h4": 151.15,
+      "ema50_h4": 157.27,
       "h4_close": 147.4,
       "h4_invalidated": false,
       "pullback": true,
@@ -3600,7 +3600,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 2.554
+      "ema20_distance_h4_pct": 2.547
     },
     {
       "ticker": "ALB",
@@ -3676,7 +3676,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.281
+      "ema20_distance_h4_pct": 0.28
     },
     {
       "ticker": "DVN",
@@ -3843,7 +3843,7 @@
       "ema50_weekly": 471.96,
       "ema20_h4": 479.09,
       "ema50_h4": 474.4,
-      "h4_close": 488.75,
+      "h4_close": 488.74,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
@@ -3854,14 +3854,14 @@
       "pullback_points": 17,
       "bounce_points": 16,
       "extension_points": 13,
-      "bounce_body_atr": 0.56,
+      "bounce_body_atr": 0.55,
       "daily_extension_atr": 0.93,
       "return_60d_pct": 1.22,
       "directional_return_60d_pct": 1.22,
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.977
+      "ema20_distance_h4_pct": 1.975
     },
     {
       "ticker": "CME",
@@ -3898,7 +3898,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.33
+      "ema20_distance_h4_pct": 0.331
     },
     {
       "ticker": "PFE",
@@ -4027,7 +4027,7 @@
       "ema20_weekly": 214.58,
       "ema50_weekly": 214.34,
       "ema20_h4": 224.68,
-      "ema50_h4": 220.27,
+      "ema50_h4": 220.28,
       "h4_close": 230.17,
       "h4_invalidated": false,
       "pullback": true,
@@ -4063,14 +4063,14 @@
       "ema50": 508.77,
       "ema20_weekly": 481.26,
       "ema50_weekly": 457.22,
-      "ema20_h4": 529.5,
-      "ema50_h4": 524.85,
+      "ema20_h4": 529.57,
+      "ema50_h4": 524.88,
       "h4_close": 530.43,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 1.37,
+      "pullback_atr": 1.38,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 13,
@@ -4083,7 +4083,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.175
+      "ema20_distance_h4_pct": 0.162
     },
     {
       "ticker": "PM",
@@ -4120,7 +4120,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.022
+      "ema20_distance_h4_pct": 3.021
     },
     {
       "ticker": "CB",
@@ -4150,7 +4150,7 @@
       "pullback_points": 20,
       "bounce_points": 20,
       "extension_points": 4,
-      "bounce_body_atr": 0.69,
+      "bounce_body_atr": 0.66,
       "daily_extension_atr": 1.65,
       "return_60d_pct": 3.07,
       "directional_return_60d_pct": 3.07,
@@ -4194,7 +4194,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 2.305
+      "ema20_distance_h4_pct": 2.304
     },
     {
       "ticker": "LIN",
@@ -4471,7 +4471,7 @@
       "ema20_weekly": 241.17,
       "ema50_weekly": 227.17,
       "ema20_h4": 250.06,
-      "ema50_h4": 245.04,
+      "ema50_h4": 245.0,
       "h4_close": 255.93,
       "h4_invalidated": false,
       "pullback": true,
@@ -4619,7 +4619,7 @@
       "ema20_weekly": 501.66,
       "ema50_weekly": 479.27,
       "ema20_h4": 522.2,
-      "ema50_h4": 517.26,
+      "ema50_h4": 517.25,
       "h4_close": 540.21,
       "h4_invalidated": false,
       "pullback": true,
@@ -4749,7 +4749,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.01
+      "ema20_distance_h4_pct": 1.009
     }
   ],
   "diagnostic_tickers": [
@@ -5107,7 +5107,7 @@
       "ema20_weekly": 214.58,
       "ema50_weekly": 214.34,
       "ema20_h4": 224.68,
-      "ema50_h4": 220.27,
+      "ema50_h4": 220.28,
       "return_60d_pct": 8.24,
       "long_status": "Confirmed setup",
       "short_status": "Trend invalidated",
@@ -5130,8 +5130,8 @@
       "ema50": 508.77,
       "ema20_weekly": 481.26,
       "ema50_weekly": 457.22,
-      "ema20_h4": 529.5,
-      "ema50_h4": 524.85,
+      "ema20_h4": 529.57,
+      "ema50_h4": 524.88,
       "return_60d_pct": 8.96,
       "long_status": "Confirmed setup",
       "short_status": "Trend invalidated",
@@ -5493,7 +5493,7 @@
       "ema20_weekly": 241.17,
       "ema50_weekly": 227.17,
       "ema20_h4": 250.06,
-      "ema50_h4": 245.04,
+      "ema50_h4": 245.0,
       "return_60d_pct": -2.87,
       "long_status": "Confirmed setup",
       "short_status": "Trend invalidated",
@@ -5543,7 +5543,7 @@
       "ema20_weekly": 501.66,
       "ema50_weekly": 479.27,
       "ema20_h4": 522.2,
-      "ema50_h4": 517.26,
+      "ema50_h4": 517.25,
       "return_60d_pct": 11.38,
       "long_status": "Confirmed setup",
       "short_status": "Trend invalidated",
@@ -5686,8 +5686,8 @@
       "ema50": 164.05,
       "ema20_weekly": 172.39,
       "ema50_weekly": 187.73,
-      "ema20_h4": 151.17,
-      "ema50_h4": 157.28,
+      "ema20_h4": 151.15,
+      "ema50_h4": 157.27,
       "return_60d_pct": -14.6,
       "long_status": "Trend invalidated",
       "short_status": "Confirmed setup",
@@ -5735,7 +5735,7 @@
       "ema20_weekly": 1085.48,
       "ema50_weekly": 1060.78,
       "ema20_h4": 1135.73,
-      "ema50_h4": 1114.25,
+      "ema50_h4": 1114.24,
       "return_60d_pct": 4.3,
       "long_status": "Trend OK",
       "short_status": "Trend invalidated",
@@ -5760,8 +5760,8 @@
       "ema50": 375.31,
       "ema20_weekly": 359.86,
       "ema50_weekly": 328.01,
-      "ema20_h4": 393.74,
-      "ema50_h4": 384.32,
+      "ema20_h4": 393.73,
+      "ema50_h4": 384.31,
       "return_60d_pct": 4.49,
       "long_status": "Confirmed setup",
       "short_status": "Trend invalidated",
@@ -5886,8 +5886,8 @@
       "ema50": 178.32,
       "ema20_weekly": 176.7,
       "ema50_weekly": 171.21,
-      "ema20_h4": 179.38,
-      "ema50_h4": 178.81,
+      "ema20_h4": 179.39,
+      "ema50_h4": 178.82,
       "return_60d_pct": 18.34,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -6084,8 +6084,8 @@
       "ema50": 1208.56,
       "ema20_weekly": 1163.2,
       "ema50_weekly": 1073.92,
-      "ema20_h4": 1285.34,
-      "ema50_h4": 1240.47,
+      "ema20_h4": 1285.35,
+      "ema50_h4": 1240.49,
       "return_60d_pct": 17.59,
       "long_status": "Trend OK",
       "short_status": "Trend invalidated",
@@ -6136,7 +6136,7 @@
       "ema50": 120.19,
       "ema20_weekly": 135.18,
       "ema50_weekly": 176.27,
-      "ema20_h4": 107.27,
+      "ema20_h4": 107.26,
       "ema50_h4": 111.7,
       "return_60d_pct": -28.84,
       "long_status": "Trend invalidated",
@@ -6240,8 +6240,8 @@
       "ema50": 3012.62,
       "ema20_weekly": 3058.27,
       "ema50_weekly": 3253.31,
-      "ema20_h4": 3129.33,
-      "ema50_h4": 3047.04,
+      "ema20_h4": 3129.34,
+      "ema50_h4": 3047.05,
       "return_60d_pct": 2.32,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -6341,7 +6341,7 @@
       "ema20_weekly": 252.44,
       "ema50_weekly": 243.24,
       "ema20_h4": 252.4,
-      "ema50_h4": 253.99,
+      "ema50_h4": 253.98,
       "return_60d_pct": -10.58,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -6699,7 +6699,7 @@
       "ema20_weekly": 951.24,
       "ema50_weekly": 953.44,
       "ema20_h4": 989.78,
-      "ema50_h4": 969.75,
+      "ema50_h4": 969.74,
       "return_60d_pct": 5.74,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -6777,7 +6777,7 @@
       "ema20_weekly": 79.28,
       "ema50_weekly": 96.49,
       "ema20_h4": 78.63,
-      "ema50_h4": 76.77,
+      "ema50_h4": 76.74,
       "return_60d_pct": 5.93,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -6983,7 +6983,7 @@
       "ema20_weekly": 366.94,
       "ema50_weekly": 348.81,
       "ema20_h4": 403.03,
-      "ema50_h4": 392.83,
+      "ema50_h4": 392.84,
       "return_60d_pct": 11.6,
       "long_status": "Confirmed setup",
       "short_status": "Trend invalidated",
@@ -7471,7 +7471,7 @@
       "ema50": 952.36,
       "ema20_weekly": 954.67,
       "ema50_weekly": 912.18,
-      "ema20_h4": 923.41,
+      "ema20_h4": 923.42,
       "ema50_h4": 941.22,
       "return_60d_pct": -6.68,
       "long_status": "Trend invalidated",
@@ -7550,7 +7550,7 @@
       "ema50": 191.59,
       "ema20_weekly": 184.21,
       "ema50_weekly": 163.9,
-      "ema20_h4": 184.72,
+      "ema20_h4": 184.73,
       "ema50_h4": 190.81,
       "return_60d_pct": -6.63,
       "long_status": "Trend invalidated",
@@ -7866,8 +7866,8 @@
       "ema50": 927.04,
       "ema20_weekly": 887.66,
       "ema50_weekly": 839.8,
-      "ema20_h4": 981.19,
-      "ema50_h4": 958.35,
+      "ema20_h4": 981.2,
+      "ema50_h4": 958.36,
       "return_60d_pct": 11.93,
       "long_status": "Pullback waiting",
       "short_status": "Trend invalidated",
@@ -7944,7 +7944,7 @@
       "ema50": 220.06,
       "ema20_weekly": 215.14,
       "ema50_weekly": 200.67,
-      "ema20_h4": 216.98,
+      "ema20_h4": 216.99,
       "ema50_h4": 220.54,
       "return_60d_pct": -2.43,
       "long_status": "Trend invalidated",
@@ -8441,7 +8441,7 @@
       "ema50": 372.25,
       "ema20_weekly": 369.47,
       "ema50_weekly": 376.35,
-      "ema20_h4": 389.14,
+      "ema20_h4": 389.15,
       "ema50_h4": 378.47,
       "return_60d_pct": 25.42,
       "long_status": "Trend invalidated",
@@ -8778,7 +8778,7 @@
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
       "long_score": 53,
-      "short_score": 10,
+      "short_score": 15,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
@@ -8855,7 +8855,7 @@
       "ema20_weekly": 456.86,
       "ema50_weekly": 445.56,
       "ema20_h4": 453.41,
-      "ema50_h4": 456.49,
+      "ema50_h4": 456.5,
       "return_60d_pct": -10.64,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -9237,8 +9237,8 @@
       "ema50": 961.69,
       "ema20_weekly": 915.09,
       "ema50_weekly": 709.02,
-      "ema20_h4": 930.67,
-      "ema50_h4": 955.45,
+      "ema20_h4": 930.65,
+      "ema50_h4": 955.44,
       "return_60d_pct": 4.62,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -9294,7 +9294,7 @@
       "ema20_weekly": 457.23,
       "ema50_weekly": 342.68,
       "ema20_h4": 486.23,
-      "ema50_h4": 504.18,
+      "ema50_h4": 504.17,
       "return_60d_pct": 2.91,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -9460,7 +9460,7 @@
       "ema20_weekly": 203.8,
       "ema50_weekly": 202.8,
       "ema20_h4": 203.51,
-      "ema50_h4": 202.34,
+      "ema50_h4": 202.35,
       "return_60d_pct": -5.48,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -9906,8 +9906,8 @@
       "ema50": 1067.13,
       "ema20_weekly": 1041.94,
       "ema50_weekly": 972.16,
-      "ema20_h4": 1123.92,
-      "ema50_h4": 1085.08,
+      "ema20_h4": 1123.91,
+      "ema50_h4": 1085.07,
       "return_60d_pct": 3.33,
       "long_status": "Trend OK",
       "short_status": "Trend invalidated",
@@ -10098,8 +10098,8 @@
       "ema50": 139.58,
       "ema20_weekly": 146.58,
       "ema50_weekly": 163.09,
-      "ema20_h4": 132.95,
-      "ema50_h4": 135.64,
+      "ema20_h4": 132.96,
+      "ema50_h4": 135.65,
       "return_60d_pct": -2.99,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10292,8 +10292,8 @@
       "ema50": 937.3,
       "ema20_weekly": 958.79,
       "ema50_weekly": 914.47,
-      "ema20_h4": 905.03,
-      "ema50_h4": 911.06,
+      "ema20_h4": 905.01,
+      "ema50_h4": 911.05,
       "return_60d_pct": -12.08,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10407,7 +10407,7 @@
       "ema50": 215.57,
       "ema20_weekly": 220.27,
       "ema50_weekly": 222.13,
-      "ema20_h4": 217.2,
+      "ema20_h4": 217.21,
       "ema50_h4": 214.37,
       "return_60d_pct": -10.2,
       "long_status": "Trend invalidated",
@@ -10746,7 +10746,7 @@
       "ema50": 393.52,
       "ema20_weekly": 354.67,
       "ema50_weekly": 282.94,
-      "ema20_h4": 410.46,
+      "ema20_h4": 410.45,
       "ema50_h4": 412.76,
       "return_60d_pct": 27.18,
       "long_status": "Trend invalidated",
@@ -10860,7 +10860,7 @@
       "ema20_weekly": 324.62,
       "ema50_weekly": 313.12,
       "ema20_h4": 301.44,
-      "ema50_h4": 307.18,
+      "ema50_h4": 307.19,
       "return_60d_pct": -17.76,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10887,8 +10887,8 @@
       "ema50": 418.83,
       "ema20_weekly": 433.62,
       "ema50_weekly": 372.63,
-      "ema20_h4": 376.81,
-      "ema50_h4": 391.11,
+      "ema20_h4": 376.8,
+      "ema50_h4": 391.1,
       "return_60d_pct": -23.81,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10974,7 +10974,7 @@
       "ema50": 338.96,
       "ema20_weekly": 342.76,
       "ema50_weekly": 322.56,
-      "ema20_h4": 321.63,
+      "ema20_h4": 321.62,
       "ema50_h4": 333.28,
       "return_60d_pct": -21.64,
       "long_status": "Trend invalidated",
@@ -11462,8 +11462,8 @@
       "ema50": 81.98,
       "ema20_weekly": 81.69,
       "ema50_weekly": 77.18,
-      "ema20_h4": 80.67,
-      "ema50_h4": 81.15,
+      "ema20_h4": 80.66,
+      "ema50_h4": 81.14,
       "return_60d_pct": -3.66,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
