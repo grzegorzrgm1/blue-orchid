@@ -1,14 +1,14 @@
 {
-  "updated": "2026-11-27 21:23 UTC",
+  "updated": "2026-11-28 07:57 UTC",
   "strategy_version": "Swing Scanner V2 - EMA20/EMA50 LONG/SHORT",
   "universe_count": 261,
   "scanned_count": 256,
   "data_error_count": 5,
   "long_candidate_count": 80,
   "short_candidate_count": 34,
-  "long_confirmed_count": 35,
+  "long_confirmed_count": 34,
   "short_confirmed_count": 16,
-  "qualifying_count": 51,
+  "qualifying_count": 50,
   "long_candidates": [
     {
       "ticker": "AEP",
@@ -119,7 +119,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.154
+      "ema20_distance_h4_pct": 4.152
     },
     {
       "ticker": "MDLZ",
@@ -304,7 +304,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.117
+      "ema20_distance_h4_pct": 1.118
     },
     {
       "ticker": "WEC",
@@ -378,7 +378,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.459
+      "ema20_distance_h4_pct": 3.462
     },
     {
       "ticker": "FAST",
@@ -416,43 +416,6 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 0.709
-    },
-    {
-      "ticker": "NEE",
-      "sector": "Utilities",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 75,
-      "qualifies": true,
-      "status": "Confirmed setup",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 84.95,
-      "ema20": 84.34,
-      "ema50": 83.16,
-      "ema20_weekly": 83.51,
-      "ema50_weekly": 83.32,
-      "ema20_h4": 84.82,
-      "ema50_h4": 84.11,
-      "h4_close": 85.06,
-      "h4_invalidated": false,
-      "pullback": true,
-      "near_ema20_h4": true,
-      "near_ema50_h4": true,
-      "pullback_atr": 1.6,
-      "bounce_confirmed": true,
-      "extended": false,
-      "pullback_points": 8,
-      "bounce_points": 7,
-      "extension_points": 15,
-      "bounce_body_atr": 0.17,
-      "daily_extension_atr": 0.45,
-      "return_60d_pct": 2.23,
-      "directional_return_60d_pct": 2.23,
-      "failed_conditions": [],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.276
     },
     {
       "ticker": "ED",
@@ -640,6 +603,43 @@
       "ema20_distance_h4_pct": 0.799
     },
     {
+      "ticker": "NEE",
+      "sector": "Utilities",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 73,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 84.95,
+      "ema20": 83.78,
+      "ema50": 82.58,
+      "ema20_weekly": 82.96,
+      "ema50_weekly": 82.73,
+      "ema20_h4": 84.82,
+      "ema50_h4": 84.11,
+      "h4_close": 85.06,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.6,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 8,
+      "bounce_points": 7,
+      "extension_points": 13,
+      "bounce_body_atr": 0.17,
+      "daily_extension_atr": 0.87,
+      "return_60d_pct": 2.98,
+      "directional_return_60d_pct": 2.98,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 0.276
+    },
+    {
       "ticker": "D",
       "sector": "Utilities",
       "direction": "LONG",
@@ -661,7 +661,7 @@
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 1.52,
+      "pullback_atr": 1.53,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 8,
@@ -674,7 +674,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.891
+      "ema20_distance_h4_pct": 0.89
     },
     {
       "ticker": "CME",
@@ -876,7 +876,7 @@
       "ema50": 246.89,
       "ema20_weekly": 245.61,
       "ema50_weekly": 241.36,
-      "ema20_h4": 249.73,
+      "ema20_h4": 249.74,
       "ema50_h4": 250.04,
       "h4_close": 253.24,
       "h4_invalidated": false,
@@ -896,7 +896,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.385
+      "ema20_distance_h4_pct": 1.382
     },
     {
       "ticker": "ABNB",
@@ -987,7 +987,7 @@
       "ema50": 237.59,
       "ema20_weekly": 230.81,
       "ema50_weekly": 223.14,
-      "ema20_h4": 250.88,
+      "ema20_h4": 250.89,
       "ema50_h4": 245.63,
       "h4_close": 254.21,
       "h4_invalidated": false,
@@ -1082,43 +1082,6 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 0.906
-    },
-    {
-      "ticker": "MO",
-      "sector": "Consumer Staples",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 68,
-      "qualifies": true,
-      "status": "Confirmed setup",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 76.89,
-      "ema20": 75.86,
-      "ema50": 73.99,
-      "ema20_weekly": 72.32,
-      "ema50_weekly": 67.84,
-      "ema20_h4": 76.03,
-      "ema50_h4": 75.63,
-      "h4_close": 76.75,
-      "h4_invalidated": false,
-      "pullback": true,
-      "near_ema20_h4": true,
-      "near_ema50_h4": true,
-      "pullback_atr": 2.76,
-      "bounce_confirmed": true,
-      "extended": false,
-      "pullback_points": 3,
-      "bounce_points": 7,
-      "extension_points": 13,
-      "bounce_body_atr": 0.02,
-      "daily_extension_atr": 0.63,
-      "return_60d_pct": 12.3,
-      "directional_return_60d_pct": 12.3,
-      "failed_conditions": [],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.94
     },
     {
       "ticker": "WAB",
@@ -1266,7 +1229,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.516
+      "ema20_distance_h4_pct": 1.515
     },
     {
       "ticker": "LIN",
@@ -1438,7 +1401,7 @@
       "ema20_weekly": 250.6,
       "ema50_weekly": 234.29,
       "ema20_h4": 268.65,
-      "ema50_h4": 262.73,
+      "ema50_h4": 262.68,
       "h4_close": 272.98,
       "h4_invalidated": false,
       "pullback": true,
@@ -1451,7 +1414,7 @@
       "bounce_points": 0,
       "extension_points": 9,
       "bounce_body_atr": 0.09,
-      "daily_extension_atr": 1.42,
+      "daily_extension_atr": 1.41,
       "return_60d_pct": 5.08,
       "directional_return_60d_pct": 5.08,
       "failed_conditions": [
@@ -1498,7 +1461,46 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 1.905
+      "ema20_distance_h4_pct": 1.906
+    },
+    {
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 68,
+      "qualifies": false,
+      "status": "Pullback waiting",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 275.51,
+      "ema20": 272.8,
+      "ema50": 268.51,
+      "ema20_weekly": 263.23,
+      "ema50_weekly": 242.25,
+      "ema20_h4": 275.03,
+      "ema50_h4": 273.43,
+      "h4_close": 276.24,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.8,
+      "bounce_confirmed": false,
+      "extended": false,
+      "pullback_points": 8,
+      "bounce_points": 0,
+      "extension_points": 15,
+      "bounce_body_atr": 0.05,
+      "daily_extension_atr": 0.45,
+      "return_60d_pct": 0.61,
+      "directional_return_60d_pct": 0.61,
+      "failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": false,
+      "ema20_distance_h4_pct": 0.438
     }
   ],
   "short_candidates": [
@@ -1555,7 +1557,7 @@
       "ema20_weekly": 166.41,
       "ema50_weekly": 177.15,
       "ema20_h4": 151.22,
-      "ema50_h4": 155.08,
+      "ema50_h4": 155.09,
       "h4_close": 150.49,
       "h4_invalidated": false,
       "pullback": true,
@@ -1574,7 +1576,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.482
+      "ema20_distance_h4_pct": 0.483
     },
     {
       "ticker": "BWXT",
@@ -1648,7 +1650,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.26
+      "ema20_distance_h4_pct": 0.261
     },
     {
       "ticker": "VST",
@@ -1709,7 +1711,7 @@
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": false,
-      "pullback_atr": 0.21,
+      "pullback_atr": 0.23,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 20,
@@ -1944,7 +1946,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.036
+      "ema20_distance_h4_pct": 3.035
     },
     {
       "ticker": "ALB",
@@ -2036,7 +2038,7 @@
       "ema20_weekly": 134.09,
       "ema50_weekly": 154.66,
       "ema20_h4": 111.38,
-      "ema50_h4": 118.89,
+      "ema50_h4": 118.88,
       "h4_close": 106.51,
       "h4_invalidated": false,
       "pullback": true,
@@ -2055,7 +2057,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.572
+      "ema20_distance_h4_pct": 4.57
     },
     {
       "ticker": "TE",
@@ -2092,7 +2094,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 6.618
+      "ema20_distance_h4_pct": 6.62
     },
     {
       "ticker": "ON",
@@ -2109,7 +2111,7 @@
       "ema50": 71.81,
       "ema20_weekly": 74.86,
       "ema50_weekly": 75.19,
-      "ema20_h4": 65.45,
+      "ema20_h4": 65.44,
       "ema50_h4": 68.47,
       "h4_close": 66.33,
       "h4_invalidated": false,
@@ -2131,7 +2133,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 1.334
+      "ema20_distance_h4_pct": 1.335
     },
     {
       "ticker": "CMC",
@@ -2248,7 +2250,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 1.468
+      "ema20_distance_h4_pct": 1.467
     },
     {
       "ticker": "AVGO",
@@ -2265,9 +2267,9 @@
       "ema50": 338.25,
       "ema20_weekly": 344.4,
       "ema50_weekly": 346.3,
-      "ema20_h4": 318.43,
-      "ema50_h4": 327.83,
-      "h4_close": 312.24,
+      "ema20_h4": 318.44,
+      "ema50_h4": 327.84,
+      "h4_close": 312.33,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
@@ -2287,7 +2289,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 1.981
+      "ema20_distance_h4_pct": 1.956
     },
     {
       "ticker": "BKR",
@@ -2365,7 +2367,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 1.343
+      "ema20_distance_h4_pct": 1.342
     },
     {
       "ticker": "CAT",
@@ -2467,7 +2469,7 @@
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 0.92,
+      "pullback_atr": 0.91,
       "bounce_confirmed": false,
       "extended": false,
       "pullback_points": 17,
@@ -2482,7 +2484,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 1.39
+      "ema20_distance_h4_pct": 1.384
     },
     {
       "ticker": "UBER",
@@ -2590,7 +2592,7 @@
       "pullback_points": 17,
       "bounce_points": 0,
       "extension_points": 15,
-      "bounce_body_atr": 0.04,
+      "bounce_body_atr": 0.01,
       "daily_extension_atr": 0.34,
       "return_60d_pct": -25.79,
       "directional_return_60d_pct": 25.79,
@@ -2599,7 +2601,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 0.976
+      "ema20_distance_h4_pct": 0.975
     },
     {
       "ticker": "CEG",
@@ -2638,7 +2640,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": false,
-      "ema20_distance_h4_pct": 5.052
+      "ema20_distance_h4_pct": 5.053
     },
     {
       "ticker": "SMCI",
@@ -2757,7 +2759,7 @@
       ],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 5.637
+      "ema20_distance_h4_pct": 5.636
     },
     {
       "ticker": "INTU",
@@ -2911,7 +2913,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.154
+      "ema20_distance_h4_pct": 4.152
     },
     {
       "ticker": "MDLZ",
@@ -3096,7 +3098,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.117
+      "ema20_distance_h4_pct": 1.118
     },
     {
       "ticker": "WEC",
@@ -3170,7 +3172,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.459
+      "ema20_distance_h4_pct": 3.462
     },
     {
       "ticker": "FAST",
@@ -3208,43 +3210,6 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 0.709
-    },
-    {
-      "ticker": "NEE",
-      "sector": "Utilities",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 75,
-      "qualifies": true,
-      "status": "Confirmed setup",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 84.95,
-      "ema20": 84.34,
-      "ema50": 83.16,
-      "ema20_weekly": 83.51,
-      "ema50_weekly": 83.32,
-      "ema20_h4": 84.82,
-      "ema50_h4": 84.11,
-      "h4_close": 85.06,
-      "h4_invalidated": false,
-      "pullback": true,
-      "near_ema20_h4": true,
-      "near_ema50_h4": true,
-      "pullback_atr": 1.6,
-      "bounce_confirmed": true,
-      "extended": false,
-      "pullback_points": 8,
-      "bounce_points": 7,
-      "extension_points": 15,
-      "bounce_body_atr": 0.17,
-      "daily_extension_atr": 0.45,
-      "return_60d_pct": 2.23,
-      "directional_return_60d_pct": 2.23,
-      "failed_conditions": [],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.276
     },
     {
       "ticker": "ED",
@@ -3432,6 +3397,43 @@
       "ema20_distance_h4_pct": 0.799
     },
     {
+      "ticker": "NEE",
+      "sector": "Utilities",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 73,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 84.95,
+      "ema20": 83.78,
+      "ema50": 82.58,
+      "ema20_weekly": 82.96,
+      "ema50_weekly": 82.73,
+      "ema20_h4": 84.82,
+      "ema50_h4": 84.11,
+      "h4_close": 85.06,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.6,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 8,
+      "bounce_points": 7,
+      "extension_points": 13,
+      "bounce_body_atr": 0.17,
+      "daily_extension_atr": 0.87,
+      "return_60d_pct": 2.98,
+      "directional_return_60d_pct": 2.98,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 0.276
+    },
+    {
       "ticker": "D",
       "sector": "Utilities",
       "direction": "LONG",
@@ -3453,7 +3455,7 @@
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 1.52,
+      "pullback_atr": 1.53,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 8,
@@ -3466,7 +3468,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.891
+      "ema20_distance_h4_pct": 0.89
     },
     {
       "ticker": "CME",
@@ -3668,7 +3670,7 @@
       "ema50": 246.89,
       "ema20_weekly": 245.61,
       "ema50_weekly": 241.36,
-      "ema20_h4": 249.73,
+      "ema20_h4": 249.74,
       "ema50_h4": 250.04,
       "h4_close": 253.24,
       "h4_invalidated": false,
@@ -3688,7 +3690,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.385
+      "ema20_distance_h4_pct": 1.382
     },
     {
       "ticker": "ABNB",
@@ -3779,7 +3781,7 @@
       "ema50": 237.59,
       "ema20_weekly": 230.81,
       "ema50_weekly": 223.14,
-      "ema20_h4": 250.88,
+      "ema20_h4": 250.89,
       "ema50_h4": 245.63,
       "h4_close": 254.21,
       "h4_invalidated": false,
@@ -3876,8 +3878,8 @@
       "ema20_distance_h4_pct": 0.906
     },
     {
-      "ticker": "MO",
-      "sector": "Consumer Staples",
+      "ticker": "WAB",
+      "sector": "Industrials",
       "direction": "LONG",
       "data_ok": true,
       "score": 68,
@@ -3885,32 +3887,32 @@
       "status": "Confirmed setup",
       "weekly": "Above EMA20/EMA50",
       "daily": "Above EMA20/EMA50",
-      "close": 76.89,
-      "ema20": 75.86,
-      "ema50": 73.99,
-      "ema20_weekly": 72.32,
-      "ema50_weekly": 67.84,
-      "ema20_h4": 76.03,
-      "ema50_h4": 75.63,
-      "h4_close": 76.75,
+      "close": 296.15,
+      "ema20": 287.69,
+      "ema50": 286.74,
+      "ema20_weekly": 281.44,
+      "ema50_weekly": 263.89,
+      "ema20_h4": 287.16,
+      "ema50_h4": 287.64,
+      "h4_close": 294.98,
       "h4_invalidated": false,
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": true,
-      "pullback_atr": 2.76,
+      "pullback_atr": 3.59,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 3,
       "bounce_points": 7,
       "extension_points": 13,
       "bounce_body_atr": 0.02,
-      "daily_extension_atr": 0.63,
-      "return_60d_pct": 12.3,
-      "directional_return_60d_pct": 12.3,
+      "daily_extension_atr": 0.83,
+      "return_60d_pct": 5.95,
+      "directional_return_60d_pct": 5.95,
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.94
+      "ema20_distance_h4_pct": 2.648
     }
   ],
   "short_setups": [
@@ -3967,7 +3969,7 @@
       "ema20_weekly": 166.41,
       "ema50_weekly": 177.15,
       "ema20_h4": 151.22,
-      "ema50_h4": 155.08,
+      "ema50_h4": 155.09,
       "h4_close": 150.49,
       "h4_invalidated": false,
       "pullback": true,
@@ -3986,7 +3988,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.482
+      "ema20_distance_h4_pct": 0.483
     },
     {
       "ticker": "BWXT",
@@ -4060,7 +4062,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.26
+      "ema20_distance_h4_pct": 0.261
     },
     {
       "ticker": "VST",
@@ -4121,7 +4123,7 @@
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": false,
-      "pullback_atr": 0.21,
+      "pullback_atr": 0.23,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 20,
@@ -4356,7 +4358,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.036
+      "ema20_distance_h4_pct": 3.035
     },
     {
       "ticker": "ALB",
@@ -4448,7 +4450,7 @@
       "ema20_weekly": 134.09,
       "ema50_weekly": 154.66,
       "ema20_h4": 111.38,
-      "ema50_h4": 118.89,
+      "ema50_h4": 118.88,
       "h4_close": 106.51,
       "h4_invalidated": false,
       "pullback": true,
@@ -4467,7 +4469,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.572
+      "ema20_distance_h4_pct": 4.57
     },
     {
       "ticker": "TE",
@@ -4504,7 +4506,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 6.618
+      "ema20_distance_h4_pct": 6.62
     }
   ],
   "setups": [
@@ -4598,7 +4600,7 @@
       "ema20_weekly": 166.41,
       "ema50_weekly": 177.15,
       "ema20_h4": 151.22,
-      "ema50_h4": 155.08,
+      "ema50_h4": 155.09,
       "h4_close": 150.49,
       "h4_invalidated": false,
       "pullback": true,
@@ -4617,7 +4619,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.482
+      "ema20_distance_h4_pct": 0.483
     },
     {
       "ticker": "BWXT",
@@ -4691,7 +4693,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.26
+      "ema20_distance_h4_pct": 0.261
     },
     {
       "ticker": "VST",
@@ -4752,7 +4754,7 @@
       "pullback": true,
       "near_ema20_h4": true,
       "near_ema50_h4": false,
-      "pullback_atr": 0.21,
+      "pullback_atr": 0.23,
       "bounce_confirmed": true,
       "extended": false,
       "pullback_points": 20,
@@ -4987,7 +4989,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.036
+      "ema20_distance_h4_pct": 3.035
     },
     {
       "ticker": "ALB",
@@ -5135,7 +5137,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.154
+      "ema20_distance_h4_pct": 4.152
     },
     {
       "ticker": "MDLZ",
@@ -5301,7 +5303,7 @@
       "ema20_weekly": 134.09,
       "ema50_weekly": 154.66,
       "ema20_h4": 111.38,
-      "ema50_h4": 118.89,
+      "ema50_h4": 118.88,
       "h4_close": 106.51,
       "h4_invalidated": false,
       "pullback": true,
@@ -5320,7 +5322,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 4.572
+      "ema20_distance_h4_pct": 4.57
     },
     {
       "ticker": "EXC",
@@ -5357,7 +5359,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 1.117
+      "ema20_distance_h4_pct": 1.118
     },
     {
       "ticker": "WEC",
@@ -5431,7 +5433,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 6.618
+      "ema20_distance_h4_pct": 6.62
     },
     {
       "ticker": "KHC",
@@ -5468,7 +5470,7 @@
       "failed_conditions": [],
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 3.459
+      "ema20_distance_h4_pct": 3.462
     },
     {
       "ticker": "FAST",
@@ -5506,43 +5508,6 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 0.709
-    },
-    {
-      "ticker": "NEE",
-      "sector": "Utilities",
-      "direction": "LONG",
-      "data_ok": true,
-      "score": 75,
-      "qualifies": true,
-      "status": "Confirmed setup",
-      "weekly": "Above EMA20/EMA50",
-      "daily": "Above EMA20/EMA50",
-      "close": 84.95,
-      "ema20": 84.34,
-      "ema50": 83.16,
-      "ema20_weekly": 83.51,
-      "ema50_weekly": 83.32,
-      "ema20_h4": 84.82,
-      "ema50_h4": 84.11,
-      "h4_close": 85.06,
-      "h4_invalidated": false,
-      "pullback": true,
-      "near_ema20_h4": true,
-      "near_ema50_h4": true,
-      "pullback_atr": 1.6,
-      "bounce_confirmed": true,
-      "extended": false,
-      "pullback_points": 8,
-      "bounce_points": 7,
-      "extension_points": 15,
-      "bounce_body_atr": 0.17,
-      "daily_extension_atr": 0.45,
-      "return_60d_pct": 2.23,
-      "directional_return_60d_pct": 2.23,
-      "failed_conditions": [],
-      "trend_alignment": true,
-      "h4_reclaimed_ema20": true,
-      "ema20_distance_h4_pct": 0.276
     },
     {
       "ticker": "ED",
@@ -5617,6 +5582,43 @@
       "trend_alignment": true,
       "h4_reclaimed_ema20": true,
       "ema20_distance_h4_pct": 1.013
+    },
+    {
+      "ticker": "WELL",
+      "sector": "Real Estate",
+      "direction": "LONG",
+      "data_ok": true,
+      "score": 74,
+      "qualifies": true,
+      "status": "Confirmed setup",
+      "weekly": "Above EMA20/EMA50",
+      "daily": "Above EMA20/EMA50",
+      "close": 249.69,
+      "ema20": 243.03,
+      "ema50": 238.56,
+      "ema20_weekly": 234.07,
+      "ema50_weekly": 217.36,
+      "ema20_h4": 245.09,
+      "ema50_h4": 242.39,
+      "h4_close": 249.57,
+      "h4_invalidated": false,
+      "pullback": true,
+      "near_ema20_h4": true,
+      "near_ema50_h4": true,
+      "pullback_atr": 1.39,
+      "bounce_confirmed": true,
+      "extended": false,
+      "pullback_points": 13,
+      "bounce_points": 7,
+      "extension_points": 9,
+      "bounce_body_atr": 0.11,
+      "daily_extension_atr": 1.37,
+      "return_60d_pct": 5.01,
+      "directional_return_60d_pct": 5.01,
+      "failed_conditions": [],
+      "trend_alignment": true,
+      "h4_reclaimed_ema20": true,
+      "ema20_distance_h4_pct": 1.792
     }
   ],
   "diagnostic_tickers": [
@@ -5754,7 +5756,7 @@
       "ema20_weekly": 166.41,
       "ema50_weekly": 177.15,
       "ema20_h4": 151.22,
-      "ema50_h4": 155.08,
+      "ema50_h4": 155.09,
       "return_60d_pct": -24.47,
       "long_status": "Trend invalidated",
       "short_status": "Confirmed setup",
@@ -6139,7 +6141,7 @@
       "ema50": 71.81,
       "ema20_weekly": 74.86,
       "ema50_weekly": 75.19,
-      "ema20_h4": 65.45,
+      "ema20_h4": 65.44,
       "ema50_h4": 68.47,
       "return_60d_pct": -8.43,
       "long_status": "Trend invalidated",
@@ -6263,8 +6265,8 @@
       "ema50": 338.25,
       "ema20_weekly": 344.4,
       "ema50_weekly": 346.3,
-      "ema20_h4": 318.43,
-      "ema50_h4": 327.83,
+      "ema20_h4": 318.44,
+      "ema50_h4": 327.84,
       "return_60d_pct": -14.79,
       "long_status": "Trend invalidated",
       "short_status": "Pullback waiting",
@@ -6290,7 +6292,7 @@
       "ema20_weekly": 134.09,
       "ema50_weekly": 154.66,
       "ema20_h4": 111.38,
-      "ema50_h4": 118.89,
+      "ema50_h4": 118.88,
       "return_60d_pct": -26.23,
       "long_status": "Trend invalidated",
       "short_status": "Confirmed setup",
@@ -6622,7 +6624,7 @@
       "return_60d_pct": -25.79,
       "long_status": "Trend invalidated",
       "short_status": "Pullback waiting",
-      "long_score": 10,
+      "long_score": 3,
       "short_score": 77,
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -6776,30 +6778,6 @@
       "short_status": "Trend invalidated",
       "long_score": 75,
       "short_score": 17,
-      "long_failed_conditions": [],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "NEE",
-      "sector": "Utilities",
-      "data_ok": true,
-      "close": 84.95,
-      "ema20": 84.34,
-      "ema50": 83.16,
-      "ema20_weekly": 83.51,
-      "ema50_weekly": 83.32,
-      "ema20_h4": 84.82,
-      "ema50_h4": 84.11,
-      "return_60d_pct": 2.23,
-      "long_status": "Confirmed setup",
-      "short_status": "Trend invalidated",
-      "long_score": 75,
-      "short_score": 13,
       "long_failed_conditions": [],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -7079,6 +7057,30 @@
       ]
     },
     {
+      "ticker": "NEE",
+      "sector": "Utilities",
+      "data_ok": true,
+      "close": 84.95,
+      "ema20": 83.78,
+      "ema50": 82.58,
+      "ema20_weekly": 82.96,
+      "ema50_weekly": 82.73,
+      "ema20_h4": 84.82,
+      "ema50_h4": 84.11,
+      "return_60d_pct": 2.98,
+      "long_status": "Confirmed setup",
+      "short_status": "Trend invalidated",
+      "long_score": 73,
+      "short_score": 13,
+      "long_failed_conditions": [],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "DUK",
       "sector": "Utilities",
       "data_ok": true,
@@ -7231,32 +7233,6 @@
       ]
     },
     {
-      "ticker": "PGR",
-      "sector": "Financials",
-      "data_ok": true,
-      "close": 239.14,
-      "ema20": 232.18,
-      "ema50": 226.31,
-      "ema20_weekly": 222.02,
-      "ema50_weekly": 218.1,
-      "ema20_h4": 234.81,
-      "ema50_h4": 231.18,
-      "return_60d_pct": 8.07,
-      "long_status": "Pullback waiting",
-      "short_status": "Trend invalidated",
-      "long_score": 71,
-      "short_score": 8,
-      "long_failed_conditions": [
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "ALL",
       "sector": "Financials",
       "data_ok": true,
@@ -7266,7 +7242,7 @@
       "ema20_weekly": 250.6,
       "ema50_weekly": 234.29,
       "ema20_h4": 268.65,
-      "ema50_h4": 262.73,
+      "ema50_h4": 262.68,
       "return_60d_pct": 5.08,
       "long_status": "Pullback waiting",
       "short_status": "Trend invalidated",
@@ -7342,8 +7318,8 @@
       "ema50": 353.91,
       "ema20_weekly": 341.78,
       "ema50_weekly": 293.4,
-      "ema20_h4": 347.89,
-      "ema50_h4": 348.85,
+      "ema20_h4": 347.91,
+      "ema50_h4": 348.86,
       "return_60d_pct": 11.65,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -7368,7 +7344,7 @@
       "ema50": 246.89,
       "ema20_weekly": 245.61,
       "ema50_weekly": 241.36,
-      "ema20_h4": 249.73,
+      "ema20_h4": 249.74,
       "ema50_h4": 250.04,
       "return_60d_pct": 11.3,
       "long_status": "Confirmed setup",
@@ -7692,32 +7668,6 @@
       ]
     },
     {
-      "ticker": "YUM",
-      "sector": "Consumer Discretionary",
-      "data_ok": true,
-      "close": 166.97,
-      "ema20": 160.89,
-      "ema50": 155.31,
-      "ema20_weekly": 153.33,
-      "ema50_weekly": 151.4,
-      "ema20_h4": 163.65,
-      "ema50_h4": 159.62,
-      "return_60d_pct": 10.94,
-      "long_status": "Pullback waiting",
-      "short_status": "Trend invalidated",
-      "long_score": 69,
-      "short_score": 3,
-      "long_failed_conditions": [
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "COR",
       "sector": "Healthcare",
       "data_ok": true,
@@ -7750,7 +7700,7 @@
       "ema50": 237.59,
       "ema20_weekly": 230.81,
       "ema50_weekly": 223.14,
-      "ema20_h4": 250.88,
+      "ema20_h4": 250.89,
       "ema50_h4": 245.63,
       "return_60d_pct": 14.18,
       "long_status": "Confirmed setup",
@@ -7826,7 +7776,7 @@
       "ema50": 163.95,
       "ema20_weekly": 168.58,
       "ema50_weekly": 182.71,
-      "ema20_h4": 166.83,
+      "ema20_h4": 166.84,
       "ema50_h4": 164.56,
       "return_60d_pct": -8.5,
       "long_status": "Trend invalidated",
@@ -7836,30 +7786,6 @@
       "long_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50"
       ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
-      "ticker": "MO",
-      "sector": "Consumer Staples",
-      "data_ok": true,
-      "close": 76.89,
-      "ema20": 75.86,
-      "ema50": 73.99,
-      "ema20_weekly": 72.32,
-      "ema50_weekly": 67.84,
-      "ema20_h4": 76.03,
-      "ema50_h4": 75.63,
-      "return_60d_pct": 12.3,
-      "long_status": "Confirmed setup",
-      "short_status": "Trend invalidated",
-      "long_score": 68,
-      "short_score": 17,
-      "long_failed_conditions": [],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -7958,6 +7884,32 @@
       "long_score": 68,
       "short_score": 13,
       "long_failed_conditions": [],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
+      "ticker": "PGR",
+      "sector": "Financials",
+      "data_ok": true,
+      "close": 239.14,
+      "ema20": 232.18,
+      "ema50": 226.31,
+      "ema20_weekly": 222.02,
+      "ema50_weekly": 218.1,
+      "ema20_h4": 234.81,
+      "ema50_h4": 231.18,
+      "return_60d_pct": 8.07,
+      "long_status": "Pullback waiting",
+      "short_status": "Trend invalidated",
+      "long_score": 67,
+      "short_score": 8,
+      "long_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
       "short_failed_conditions": [
         "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
         "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
@@ -8253,6 +8205,33 @@
       ]
     },
     {
+      "ticker": "YUM",
+      "sector": "Consumer Discretionary",
+      "data_ok": true,
+      "close": 166.97,
+      "ema20": 160.24,
+      "ema50": 154.65,
+      "ema20_weekly": 152.71,
+      "ema50_weekly": 150.75,
+      "ema20_h4": 163.65,
+      "ema50_h4": 159.62,
+      "return_60d_pct": 11.44,
+      "long_status": "Pullback waiting",
+      "short_status": "Trend invalidated",
+      "long_score": 65,
+      "short_score": 3,
+      "long_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "D1: cena jest ponad 2 ATR od EMA20 — trend jest rozciagniety, nie traktuj jako swiezego setupu"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "ROST",
       "sector": "Consumer Discretionary",
       "data_ok": true,
@@ -8490,7 +8469,7 @@
       "ema20_weekly": 491.27,
       "ema50_weekly": 466.13,
       "ema20_h4": 501.53,
-      "ema50_h4": 512.7,
+      "ema50_h4": 512.69,
       "return_60d_pct": -0.61,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -8543,7 +8522,7 @@
       "ema20_weekly": 322.27,
       "ema50_weekly": 314.2,
       "ema20_h4": 321.29,
-      "ema50_h4": 319.87,
+      "ema50_h4": 319.88,
       "return_60d_pct": -1.54,
       "long_status": "Pullback waiting",
       "short_status": "Trend invalidated",
@@ -8751,7 +8730,7 @@
       "ema50": 159.8,
       "ema20_weekly": 155.85,
       "ema50_weekly": 147.55,
-      "ema20_h4": 159.61,
+      "ema20_h4": 159.62,
       "ema50_h4": 161.31,
       "return_60d_pct": 9.32,
       "long_status": "Pullback waiting",
@@ -9245,6 +9224,32 @@
       ]
     },
     {
+      "ticker": "MO",
+      "sector": "Consumer Staples",
+      "data_ok": true,
+      "close": 76.89,
+      "ema20": 75.86,
+      "ema50": 73.99,
+      "ema20_weekly": 72.32,
+      "ema50_weekly": 67.84,
+      "ema20_h4": 76.03,
+      "ema50_h4": 75.63,
+      "return_60d_pct": 12.3,
+      "long_status": "Pullback waiting",
+      "short_status": "Trend invalidated",
+      "long_score": 61,
+      "short_score": 17,
+      "long_failed_conditions": [
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "SPGI",
       "sector": "Financials",
       "data_ok": true,
@@ -9385,7 +9390,7 @@
       "ema50": 510.99,
       "ema20_weekly": 492.13,
       "ema50_weekly": 417.41,
-      "ema20_h4": 454.19,
+      "ema20_h4": 454.18,
       "ema50_h4": 489.47,
       "return_60d_pct": -7.12,
       "long_status": "Trend invalidated",
@@ -9441,8 +9446,8 @@
       "ema50": 825.49,
       "ema20_weekly": 833.45,
       "ema50_weekly": 709.95,
-      "ema20_h4": 672.82,
-      "ema50_h4": 752.09,
+      "ema20_h4": 672.86,
+      "ema50_h4": 752.11,
       "return_60d_pct": -32.32,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -9636,7 +9641,7 @@
       "ema50": 138.09,
       "ema20_weekly": 138.41,
       "ema50_weekly": 140.37,
-      "ema20_h4": 142.63,
+      "ema20_h4": 142.64,
       "ema50_h4": 140.4,
       "return_60d_pct": 4.0,
       "long_status": "Trend invalidated",
@@ -9963,7 +9968,7 @@
       "ema50": 56.69,
       "ema20_weekly": 55.23,
       "ema50_weekly": 55.2,
-      "ema20_h4": 57.4,
+      "ema20_h4": 57.39,
       "ema50_h4": 57.39,
       "return_60d_pct": 8.44,
       "long_status": "Pullback waiting",
@@ -10071,8 +10076,8 @@
       "ema50": 634.02,
       "ema20_weekly": 676.12,
       "ema50_weekly": 619.57,
-      "ema20_h4": 502.38,
-      "ema50_h4": 555.49,
+      "ema20_h4": 502.37,
+      "ema50_h4": 556.23,
       "return_60d_pct": -36.91,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10237,7 +10242,7 @@
       "ema20_weekly": 79.64,
       "ema50_weekly": 93.06,
       "ema20_h4": 82.1,
-      "ema50_h4": 81.22,
+      "ema50_h4": 81.2,
       "return_60d_pct": 8.98,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10321,7 +10326,7 @@
       "ema20_weekly": 252.94,
       "ema50_weekly": 245.25,
       "ema20_h4": 255.21,
-      "ema50_h4": 256.72,
+      "ema50_h4": 256.73,
       "return_60d_pct": -0.34,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -10734,7 +10739,7 @@
       "ema20_weekly": 147.21,
       "ema50_weekly": 137.06,
       "ema20_h4": 150.06,
-      "ema50_h4": 151.67,
+      "ema50_h4": 151.66,
       "return_60d_pct": 0.5,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -11165,34 +11170,6 @@
       ]
     },
     {
-      "ticker": "HII",
-      "sector": "Industrials",
-      "data_ok": true,
-      "close": 304.48,
-      "ema20": 294.91,
-      "ema50": 290.54,
-      "ema20_weekly": 294.08,
-      "ema50_weekly": 302.67,
-      "ema20_h4": 296.24,
-      "ema50_h4": 293.9,
-      "return_60d_pct": 5.46,
-      "long_status": "Trend invalidated",
-      "short_status": "Trend invalidated",
-      "long_score": 46,
-      "short_score": 8,
-      "long_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
-        "Ponizej progu punktowego 60"
-      ],
-      "short_failed_conditions": [
-        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
-        "H4: zamkniecie po niewlasciwej stronie EMA50",
-        "Ponizej progu punktowego 60"
-      ]
-    },
-    {
       "ticker": "INTU",
       "sector": "Technology",
       "data_ok": true,
@@ -11341,7 +11318,7 @@
       "ema50": 254.08,
       "ema20_weekly": 247.71,
       "ema50_weekly": 222.97,
-      "ema20_h4": 250.85,
+      "ema20_h4": 250.84,
       "ema50_h4": 254.08,
       "return_60d_pct": -2.5,
       "long_status": "Trend invalidated",
@@ -11558,6 +11535,34 @@
       ]
     },
     {
+      "ticker": "HII",
+      "sector": "Industrials",
+      "data_ok": true,
+      "close": 304.48,
+      "ema20": 293.66,
+      "ema50": 289.23,
+      "ema20_weekly": 292.83,
+      "ema50_weekly": 301.3,
+      "ema20_h4": 296.24,
+      "ema50_h4": 293.9,
+      "return_60d_pct": 5.96,
+      "long_status": "Trend invalidated",
+      "short_status": "Trend invalidated",
+      "long_score": 42,
+      "short_score": 8,
+      "long_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: korekta byla, ale ostatnia zamknieta swieca nie potwierdzila odbicia przez EMA20",
+        "Ponizej progu punktowego 60"
+      ],
+      "short_failed_conditions": [
+        "W1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "D1: cena nie jest po wlasciwej stronie EMA20 i EMA50",
+        "H4: zamkniecie po niewlasciwej stronie EMA50",
+        "Ponizej progu punktowego 60"
+      ]
+    },
+    {
       "ticker": "VICI",
       "sector": "Real Estate",
       "data_ok": true,
@@ -11733,7 +11738,7 @@
       "ema50": 211.98,
       "ema20_weekly": 206.95,
       "ema50_weekly": 190.47,
-      "ema20_h4": 211.65,
+      "ema20_h4": 211.64,
       "ema50_h4": 214.62,
       "return_60d_pct": 1.15,
       "long_status": "Trend invalidated",
@@ -11874,7 +11879,7 @@
       "ema20_weekly": 180.14,
       "ema50_weekly": 178.96,
       "ema20_h4": 185.03,
-      "ema50_h4": 185.08,
+      "ema50_h4": 185.07,
       "return_60d_pct": 8.1,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -11958,7 +11963,7 @@
       "ema20_weekly": 353.57,
       "ema50_weekly": 295.43,
       "ema20_h4": 339.98,
-      "ema50_h4": 361.43,
+      "ema50_h4": 361.44,
       "return_60d_pct": -9.7,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -11985,8 +11990,8 @@
       "ema50": 287.2,
       "ema20_weekly": 283.96,
       "ema50_weekly": 282.98,
-      "ema20_h4": 279.8,
-      "ema50_h4": 286.73,
+      "ema20_h4": 279.81,
+      "ema50_h4": 286.74,
       "return_60d_pct": -3.26,
       "long_status": "Trend invalidated",
       "short_status": "Trend invalidated",
@@ -12237,7 +12242,7 @@
       "ema50": 529.72,
       "ema20_weekly": 515.68,
       "ema50_weekly": 489.9,
-      "ema20_h4": 541.89,
+      "ema20_h4": 541.88,
       "ema50_h4": 537.38,
       "return_60d_pct": -3.98,
       "long_status": "Trend invalidated",
